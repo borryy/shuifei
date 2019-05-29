@@ -21,6 +21,7 @@
 h4.pointer{
     margin: 0 -0.04rem;
     background: url(../images/border.png) no-repeat;
+    background-size: 100%;
     font-size: 0.11rem;
     text-align: center;
 }
