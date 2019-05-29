@@ -1,0 +1,126 @@
+.serchForm{
+    display: flex;
+}
+.serchForm input{
+    width: 2.38rem;
+    height: 0.225rem;
+    padding-left: 5px;
+    flex-grow: 1;
+    align-self: center;
+    font-size: 0.12rem;
+    border: 1px solid #013065;
+}
+.serchForm button{
+    width: 0.75rem;
+    height: 0.255rem;
+    background-color: #013065;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 3px;;
+    font-size: 0.12rem;
+}
+.supervision{
+    margin-top: 0.24rem;
+    padding-top: 0.175rem;
+}
+.supervision .tip{
+    height: 0.3rem;
+    border:2px solid #013065;
+    position: relative;
+    background-color: #194373;
+}
+.supervision .tip .radios{
+    width: 0.66rem;
+    height: 0.66rem;
+    overflow: hidden;
+    border: 2px solid #174272;
+    background-color: #194373;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.18rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.supervision .tip .radios h2{
+    height: 50%;
+    text-align: center;
+    font-size: 0.14rem;
+    font-weight: normal;
+    line-height: 0.48rem;
+    color: #013065;
+    background-color: #fff;
+}
+.superContent{
+    border: 2px solid #fff;
+    border-top: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: #194373;
+}
+.superContent ul{
+    padding-top: 0.19rem;
+}
+.superContent ul li{
+    height: 0.28rem;
+    line-height: 0.28rem;
+    border-bottom: 2px solid #fff;
+    overflow: hidden;
+    color: #fff;
+    font-size: 0.1rem;
+}
+.superContent ul li .left,.superContent ul li .right{
+    display: flex;
+}
+.superContent ul li .left p{
+    width: 0.065rem;
+    height: 0.065rem;
+    margin: 0 0.055rem;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
+    align-self: center;
+}
+.superContent ul li .right p,.superContent ul li .right img{
+    display: inline-block;
+}
+.superContent ul li .right p{
+    height:0.15rem;
+    padding: 2px 5px;
+    line-height: 0.15rem;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #EE5C5C;
+    align-self: center;
+   display: flex;
+}
+.superContent ul li .right img{
+    width:0.17rem;
+    height:0.09rem;
+    align-self: center;
+    margin-left: 0.06rem;
+    margin-right: 0.02rem;
+}
+.superContent ul li .right a{
+    color: #fff;
+    margin-right: 0.075rem;
+}
+.superContent ul li .right p img{
+    width: 0.11rem;
+    height: 0.11rem;
+    margin: 0;
+    margin-right: 5px;
+    align-self: center;
+}
+.superContent ul li a {
+    display:inline-block;
+}
+.superContent ul li a p{
+    width: 0.065rem;
+    height: 0.065rem;
+    margin: 2px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+    align-self: center;
+}

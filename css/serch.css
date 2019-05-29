@@ -1,0 +1,15 @@
+.box{
+    height: 4rem;;
+    margin: 0.52rem auto;
+    background-color: #194373;
+}
+.box a.home{
+    width: 0.29rem;
+    height: 0.24rem;
+    display: block;
+    margin: 0.08rem auto;
+    background-image: url(../images/home.png);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

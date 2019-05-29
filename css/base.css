@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding-bottom: 1rem;
+}
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #000;
+    text-decoration: none;
+}
+input{
+    outline: none;
+}
+button{
+    border: 0;
+    outline: none;
+}
+.text-center{
+    text-align: center;
+}
+.marginAuto{
+    margin: 0 auto;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+/* 头部 */
+header{
+    height: 1.04rem;
+    line-height: 1.04rem;
+    background-color: #013065;
+    background-image: url(../images/logo_03.png);
+    background-size: 0.7rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 0.3rem;
+}
+footer{
+    width: 100%;
+    height: 0.38rem;
+    font-size: 0.1rem;
+    color: #fff;
+    background-color: #013065;
+    position: fixed;
+    bottom: 0;
+}
+footer ul,footer li{
+    height: 100%;
+}
+footer ul li a{
+    display: block;
+    height: 100%;
+    padding-top: 0.04rem;
+    box-sizing: border-box;
+    color: #fff!important;
+}
+footer ul li {
+    width: 33.33%;
+    display: block;
+    float: left;
+}
+footer ul li img{
+    width: 0.145rem;
+}
+footer ul li.center a img{
+    width: 0.575rem;
+    margin-top: -0.22rem;
+}
+footer ul li a{
+    position: relative;
+}
+footer ul li a p{
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+}
+.content{
+    width: 3.19rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+@media screen and (max-width:360px){
+    .content{
+        width: 3.6rem;
+    }
+}

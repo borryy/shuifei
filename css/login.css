@@ -1,0 +1,39 @@
+body{
+    background-color: #013065;
+}
+.content img{
+    width: 1rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1.38rem;
+}
+.content form{
+    margin-top: 0.48rem;
+}
+.content form input{
+    width: 2.87rem;
+    height: 0.35rem;
+    padding-left: 0.88rem;
+    box-sizing: border-box;
+    font-size: 0.14rem;
+    border: 1px solid #fff;
+    border-radius: 0.08rem;
+    display: block;
+    margin: 0.18rem auto;
+    background-color: inherit;
+    color: #B5B5B5;
+    background-image: url(../images/user.png);
+    background-position: 0.08rem center;
+    background-size: 0.18rem;
+    background-repeat: no-repeat;
+}
+.content form button{
+    width:1.23rem;
+    height:0.27rem;
+    display: block;
+    margin: 0 auto;
+    font-size: 0.18rem;
+    color: #fff;
+    background:rgba(255,255,255,0.48);
+    border-radius:0.08rem;
+}
