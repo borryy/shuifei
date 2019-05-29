@@ -27,6 +27,10 @@
     left: 0;
     right: 0;
 }
+.box ul li {
+    height: 0.47rem;
+    background-image: 
+}
 .box ul li a{
     color: #fff;
 }
