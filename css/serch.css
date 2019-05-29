@@ -1,15 +1,35 @@
+.content{
+    overflow: inherit;
+    margin-top: 0.22rem;
+}
 .box{
-    height: 4rem;;
-    margin: 0.52rem auto;
+    height: 4rem;
     background-color: #194373;
+    padding-top: 0.08rem;
+    box-sizing: border-box;
 }
 .box a.home{
     width: 0.29rem;
     height: 0.24rem;
     display: block;
-    margin: 0.08rem auto;
+    margin: 0 auto;
     background-image: url(../images/home.png);
     background-position: center center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+}
+.box ul{
+    width: 3.44rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.11rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.box ul li {
+    height: 0.47rem;
+}
+.box ul li a{
+    color: #fff;
 }
