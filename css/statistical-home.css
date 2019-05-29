@@ -1,0 +1,26 @@
+.model{
+    width: 3.18rem;
+    margin: 0.1rem auto;
+    background-color: #013065;
+    color: #fff;
+}
+
+.model-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.8rem 0 0.35rem;
+}
+
+.model-head img{
+    display: block;
+    width: 0.29rem;
+    height: 0.24rem;
+}
+
+h4.pointer{
+    margin: 0 -0.04rem;
+    background: url(../images/border.png) no-repeat;
+    font-size: 0.11rem;
+    text-align: center;
+}
