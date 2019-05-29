@@ -20,7 +20,7 @@
 }
 .box ul{
     width: 3.44rem;
-    margin: 0 auto;
+    margin: 0.2rem auto;
     text-align: center;
     font-size: 0.11rem;
     position: absolute;
@@ -29,6 +29,12 @@
 }
 .box ul li {
     height: 0.47rem;
+    line-height: 0.47rem;
+    margin: 0.2rem 0;
+    background-image: url(../images/border.png);
+    background-size: 100%;
+    background-position: -1px center;
+    background-repeat: no-repeat;
 }
 .box ul li a{
     color: #fff;
