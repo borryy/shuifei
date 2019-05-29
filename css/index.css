@@ -1,24 +1,4 @@
-.serchForm{
-    display: flex;
-}
-.serchForm input{
-    width: 2.38rem;
-    height: 0.225rem;
-    padding-left: 5px;
-    flex-grow: 1;
-    align-self: center;
-    font-size: 0.12rem;
-    border: 1px solid #013065;
-}
-.serchForm button{
-    width: 0.75rem;
-    height: 0.255rem;
-    background-color: #013065;
-    border-radius: 5px;
-    color: #fff;
-    margin-left: 3px;;
-    font-size: 0.12rem;
-}
+
 .supervision{
     margin-top: 0.24rem;
     padding-top: 0.175rem;

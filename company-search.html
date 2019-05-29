@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智慧财税</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/serch.css">
+    <link rel="stylesheet" href="css/company-search.css">
+    <script src="js/rem.js"></script>
+</head>
+<body>
+    <header></header>
+    <div class="content">
+        <div class="box">
+            <a href="#" class="home"></a>
+            <ul>
+                <li><a href="#">企业全景信息查询</a></li>
+            </ul>
+            <div class="tabdiv">
+                <div class="tab-head">
+                    <h2 class="selected">企业名称</h2>
+                    <h2>新编码查询</h2>
+                    <h2>工商注册码</h2>
+                    <h2>法人</h2>
+                </div>
+                <div class="tab-content">
+                    <div class="show tdiv">
+                        <input type="text" placeholder="在此输入您要查询的内容">
+                        <div class="showHistory">
+                            <div class="list listTop">
+                                <p class="left">最近搜索</p>
+                                <p class="right">清空历史</p>
+                            </div>
+                            <div class="list listTrue">
+                                <p class="left">穷奇科技石家庄有限公司</p>
+                                <p class="right"><img src="images/delete.png" alt=""></p>
+                            </div>
+                            <div class="list listTrue">
+                                <p class="left">穷奇科技石家庄有限公司</p>
+                                <p class="right"><img src="images/delete.png" alt=""></p>
+                            </div>
+                        </div>
+                        <button>企业查询</button>
+                    </div>
+                    <div class="tdiv">
+                        <input type="text" placeholder="在此输入您要查询的内容">
+                        <div class="showHistory">
+                            <div class="list listTop">
+                                <p class="left">最近搜索</p>
+                                <p class="right">清空历史</p>
+                            </div>
+                            <div class="list listTrue">
+                                <p class="left">穷奇科技石家庄有限公司</p>
+                                <p class="right"><img src="images/delete.png" alt=""></p>
+                            </div>
+                            <div class="list listTrue">
+                                <p class="left">穷奇科技石家庄有限公司</p>
+                                <p class="right"><img src="images/delete.png" alt=""></p>
+                            </div>
+                        </div>
+                        <button>新编码查询</button>
+                    </div>
+                    <div class="tdiv">
+                        <input type="text" placeholder="在此输入您要查询的内容">
+                        <div class="showHistory">
+                            <div class="list listTop">
+                                <p class="left">最近搜索</p>
+                                <p class="right">清空历史</p>
+                            </div>
+                            <div class="list listTrue">
+                                <p class="left">穷奇科技石家庄有限公司</p>
+                                <p class="right"><img src="images/delete.png" alt=""></p>
+                            </div>
+                            <div class="list listTrue">
+                                <p class="left">穷奇科技石家庄有限公司</p>
+                                <p class="right"><img src="images/delete.png" alt=""></p>
+                            </div>
+                        </div>
+                        <button>工商注册码查询</button>
+                    </div>
+                    <div class="tdiv">
+                        <input type="text" placeholder="在此输入您要查询的内容">
+                        <div class="showHistory">
+                            <div class="list listTop">
+                                <p class="left">最近搜索</p>
+                                <p class="right">清空历史</p>
+                            </div>
+                            <div class="list listTrue">
+                                <p class="left">穷奇科技石家庄有限公司</p>
+                                <p class="right"><img src="images/delete.png" alt=""></p>
+                            </div>
+                            <div class="list listTrue">
+                                <p class="left">穷奇科技石家庄有限公司</p>
+                                <p class="right"><img src="images/delete.png" alt=""></p>
+                            </div>
+                        </div>
+                        <button>法人查询</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <footer class="text-center">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="images/serch.png" alt="">
+                    <p>分类查询</p>
+                </a>
+            </li>
+            <li class="center">
+                <a href="#">
+                    <img src="images/person.png" alt="">
+                    <p>个人中心</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/row.png" alt="">
+                    <p>协同治税</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+    var tabs = $('.tab-head').find('h2') ,
+        contents = $('.tab-content').find('.tdiv');
+
+    (function changeTab(tab) {
+        for(var i = 0, len = tabs.length; i < len; i++) {
+            tabs[i].onmouseover = showTab;
+        }
+    })();
+
+    function showTab() {
+        for(var i = 0, len = tabs.length; i < len; i++) {
+            if(tabs[i] === this) {
+                tabs.eq(i).addClass('selected') ;
+                contents.eq(i).addClass('show') ;
+            } else {
+                tabs.eq(i).removeClass('selected') ;
+                contents.eq(i).removeClass('show') ;
+            }
+        }
+    }
+    
+    $(document).on("focus",".tdiv input",function(){
+        $(this).siblings(".showHistory").slideDown();
+    })
+    $(document).on("blur",".tdiv input",function(){
+        $(this).siblings(".showHistory").slideUp();
+    })
+    </script>
+</body>
+</html>

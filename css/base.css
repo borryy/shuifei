@@ -49,14 +49,49 @@ button{
 }
 /* 头部 */
 header{
-    height: 1.04rem;
-    line-height: 1.04rem;
+    height: 0.8rem;
+    /* line-height: 0.6rem; */
+    padding-top: 0.25rem;
+    box-sizing: border-box;
     background-color: #013065;
     background-image: url(../images/logo_03.png);
-    background-size: 0.7rem;
-    background-position: center center;
+    background-size: 0.4rem;
+    background-position: 0.1rem center;
     background-repeat: no-repeat;
-    margin-bottom: 0.3rem;
+    position: relative;
+}
+.serchForm{
+    position: absolute;
+    right: 0.8rem;
+}
+.serchForm .form{
+    position: relative;
+}
+.serchForm input{
+    width: 0;
+    height: 0.3rem;
+    font-size: 0.12rem;
+    border: 0;
+    background-color: rgba(255,255,255,0.2);
+    box-sizing: border-box;
+    color: #fff;
+    padding-left: 5px;
+    padding:0;
+    border-radius: 0.08rem;
+}
+
+.serchForm button{
+    width: 0.15rem;
+    height: 100%;
+    background-color: inherit;
+    background-image: url(../images/serch.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    position: absolute;
+    right: 0.06rem;
+    top: 0;
 }
 footer{
     width: 100%;
