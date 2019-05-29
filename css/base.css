@@ -55,8 +55,8 @@ header{
     box-sizing: border-box;
     background-color: #013065;
     background-image: url(../images/logo_03.png);
-    background-size: 0.4rem;
-    background-position: 0.1rem center;
+    background-size: 0.55rem;
+    background-position: 0.2rem center;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -92,6 +92,27 @@ header{
     position: absolute;
     right: 0.06rem;
     top: 0;
+}
+.topButton{
+    height: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 0.2rem;
+}
+.topButton button{
+    width: 0.15rem;
+    height: 0.15rem;
+    background-color: inherit;
+    background-image: url(../images/home.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.topButton .return{
+    background-image: url(../images/row.png);
+    margin-left: 0.175rem;
 }
 footer{
     width: 100%;
