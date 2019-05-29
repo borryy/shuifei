@@ -33,9 +33,15 @@
     margin: 0.2rem 0;
     background-image: url(../images/border.png);
     background-size: 100%;
-    background-position: -1px center;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 .box ul li a{
     color: #fff;
+}
+
+@media screen and (max-width:360px){
+    .content{
+        width: 3.19rem;
+    }
 }

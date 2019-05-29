@@ -104,7 +104,7 @@ footer ul li a p{
     overflow: hidden;
 }
 @media screen and (max-width:360px){
-    .content{
-        width: 3.6rem;
+    footer{
+        height: 0.45rem;
     }
 }

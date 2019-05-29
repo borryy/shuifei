@@ -124,3 +124,8 @@
     background-color: #fff;
     align-self: center;
 }
+@media screen and (max-width:360px){
+    .content{
+        width: 3.6rem;
+    }
+}
