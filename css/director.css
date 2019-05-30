@@ -1,0 +1,129 @@
+
+.model{
+    padding: 0.2rem 0;
+    width: 3.18rem;
+    margin: 0.5rem auto 0.2rem;
+    background-color: #013065;
+    color: #fff;
+    border-radius: 0.08rem;
+    box-shadow: 0.01rem 0.01rem 0.1rem -0.02rem #333;
+}
+
+h4.pointer{
+    font-size: 0.14rem;
+    line-height: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.2rem -0.05rem;
+}
+
+.pointer-left,
+.pointer-right{
+    background-color: #013065;
+    width: 1.2rem;
+    height: 0.25rem;
+    position: relative;
+    box-shadow: 0 0.02rem 0.1rem -0.02rem #000;
+}
+
+.pointer-left:after{
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 0.05rem solid #013065;
+    border-left: 0.05rem solid transparent;
+    content: " ";
+    position: absolute;
+    bottom: -0.05rem;
+    left: 0;
+}
+
+.pointer-right:after{
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 0.05rem solid #013065;
+    border-right: 0.05rem solid transparent;
+    content: " ";
+    position: absolute;
+    bottom: -0.05rem;
+    right: 0;
+}
+
+.table-header{
+    font-size: 0.12rem;
+    text-align: center;
+    padding: 0.1rem 0.1rem 0.04rem;
+}
+
+.table{
+    box-sizing: border-box;
+    border-color: #eee;
+    width: 3rem;
+    margin: 0.1rem auto;
+}
+
+.table tr{
+    height: 0.2rem;
+}
+
+.table th{
+    background-color: rgb(128,158,186);
+    border-color: rgb(128,158,186);
+}
+
+.table td,
+.table th{
+    font-size: 0.11rem;
+    vertical-align: center;
+    text-align: center;
+    width: 1.51rem;
+}
+
+.page-select{
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.page-select li{
+
+}
+
+.page-select a{
+    display: block;
+    width: 0.24rem;
+    height: 0.24rem;
+    text-align: center;
+    line-height: 0.24rem;
+    border: 1px solid #999;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.12rem;
+}
+
+.page-select a.active{
+    background-color: #fff;
+    color: #013065;
+}
+
+.report-list{
+    padding: 0.2rem 0 0.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.report{
+    width: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.12rem;
+}
+
+.report+.report{
+    border-left: 1px solid #fff;
+}
