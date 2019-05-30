@@ -1,16 +1,68 @@
+html, body, .header-box{
+    height: 100%;
+}
+
 body{
+    padding-bottom: 0;
+}
+
+.header-box{
+    overflow: hidden;
     background-color: #013065;
+    overflow: hidden;
+    height: 100%;
+    transition: height .4s;
 }
-.content img{
+
+.header-box.animate{
+    /* background-color: #fff; */
+    height: 0.74rem;
+}
+
+.logo{
     width: 1rem;
-    display: block;
-    margin: 0 auto;
-    margin-top: 1.38rem;
+    left: 1.375rem;
+    top: 2.2rem;
+    /* display: block; */
+    /* margin: 0 auto; */
+    /* margin-top: 1.38rem; */
+    position: absolute;
 }
-.content form{
-    margin-top: 0.48rem;
+
+.logo.animate{
+    width: 0.55rem;
+    animation: logo 2s;
+    left: 0.1rem;
+    top: 0.1rem;
 }
-.content form input{
+
+@keyframes logo {
+    0% {
+        width: 1rem;
+        left: 1.375rem;
+        top: 2.2rem;
+    }
+    10% {
+        width: 1rem;
+        left: 1.375rem;
+        top: 2.2rem;
+    }
+
+    60% {
+        width: 0.55rem;
+        left: 1.375rem;
+        top: 0.1rem;
+    }
+
+    100% {
+        left: 0.1rem;
+        top: 0.1rem;
+    }
+}
+.header-box form{
+    margin-top: 3.48rem;
+}
+.header-box form input{
     width: 2.87rem;
     height: 0.35rem;
     padding-left: 0.88rem;
@@ -27,7 +79,7 @@ body{
     background-size: 0.18rem;
     background-repeat: no-repeat;
 }
-.content form button{
+.header-box form button{
     width:2.87rem;
     height:0.4rem;
     display: block;

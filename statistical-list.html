@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智慧财税</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/statistical-list.css">
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="serchForm">
+            <form action="">
+                <div class="form">
+                    <input type="text" class="serchInput">
+                    <button type="button"></button>
+                </div>
+            </form>
+        </div>
+        <div class="topButton">
+            <button class="home loads" type="button" data-url="home.html"></button>
+            <button class="return"></button>
+        </div>
+    </header>
+    <div>
+        <div class="model">
+            <h4 class="pointer">
+                <div class="pointer-left"></div>
+                税收统计
+                <div class="pointer-right"></div>
+            </h4>
+            <div class="table-header">
+                <div>企业列表税收排名统计</div>
+                <div class="screening-btn" id="screening-btn">筛选</div>
+            </div>
+            <table class="table" border='1' cellspacing="0" cellpadding="0">
+                <tr>
+                    <th>公司名称</th>
+                    <th>纳税金额</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <ul class="page-select">
+                <li><a class="active" href="javascript:;">1</a></li>
+                <li><a href="javascript:;">2</a></li>
+                <li><a href="javascript:;">3</a></li>
+                <li><a href="javascript:;">...</a></li>
+                <li><a href="javascript:;">99</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer class="text-center">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="images/serch.png" alt="">
+                    <p>分类查询</p>
+                </a>
+            </li>
+            <li class="center">
+                <a href="#">
+                    <img src="images/person.png" alt="">
+                    <p>个人中心</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/row.png" alt="">
+                    <p>协同治税</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- 弹窗 -->
+    <div class="dialog" id="screening-dialog">
+        <div class="dialog-content">
+            <div class="dialog-header">筛选排名</div>
+            <div class="row">
+                <div class="row-left">排&nbsp;&nbsp;&nbsp;名：</div>
+                <div class="row-right">
+                    <input type="number">
+                    <div class="to">-</div>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-left">纳税额：</div>
+                <div class="row-right">
+                    <input type="number">
+                    <div class="to">-</div>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="dialog-btns">
+                <a href="javascript:;">确定</a>
+                <a href="javascript:;">取消</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#screening-btn").click(function (events) {
+                $("#screening-dialog").fadeIn();
+                $("#screening-dialog .dialog-btns a").click(function () {
+                    $("#screening-dialog").fadeOut();
+                })
+            })
+        });
+    </script>
+</body>
+
+</html>

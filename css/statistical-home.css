@@ -1,29 +1,12 @@
+
 .model{
-    width: 3.18rem;
-    margin: 0.1rem auto;
+    padding: 0.2rem 0;
+    width: 3.5rem;
+    margin: 0.5rem auto 0.2rem;
     background-color: #013065;
     color: #fff;
-}
-
-.model-head{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0.08rem 0 0.35rem;
-}
-
-.model-head img{
-    display: block;
-    width: 0.29rem;
-    height: 0.24rem;
-}
-
-h4.pointer{
-    margin: 0 -0.04rem;
-    background: url(../images/border.png) no-repeat;
-    background-size: 100%;
-    font-size: 0.11rem;
-    text-align: center;
+    border-radius: 0.08rem;
+    box-shadow: 0.01rem 0.01rem 0.1rem -0.02rem #333;
 }
 
 .title-list{
@@ -33,14 +16,63 @@ h4.pointer{
 }
 
 .title-list li{
+    box-sizing: border-box;
+    width: 50%;
+}
 
+.title-list li:nth-child(2n+1){
+    text-align: right;
+}
+.title-list li:nth-child(2n+1){
+    padding-right: 0.1rem;
+}
+.title-list li:nth-child(2n){
+    padding-left: 0.1rem;
 }
 
 .title-list a{
     font-size: 0.1rem;
-    line-height: 2em;
+    line-height: 0.3rem;
     color: #fff;
 }
 
+h4.pointer{
+    font-size: 0.14rem;
+    line-height: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.2rem -0.05rem;
+}
 
-12312412
+.pointer-left,
+.pointer-right{
+    background-color: #013065;
+    width: 1.2rem;
+    height: 0.25rem;
+    position: relative;
+    box-shadow: 0 0.02rem 0.1rem -0.02rem #000;
+}
+
+.pointer-left:after{
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 0.05rem solid #013065;
+    border-left: 0.05rem solid transparent;
+    content: " ";
+    position: absolute;
+    bottom: -0.05rem;
+    left: 0;
+}
+
+.pointer-right:after{
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 0.05rem solid #013065;
+    border-right: 0.05rem solid transparent;
+    content: " ";
+    position: absolute;
+    bottom: -0.05rem;
+    right: 0;
+}

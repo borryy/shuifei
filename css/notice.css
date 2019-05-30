@@ -1,0 +1,138 @@
+.model {
+    padding: 0.2rem 0;
+    width: 3.5rem;
+    margin: 0.2rem auto 0.2rem;
+    background-color: #013065;
+    color: #fff;
+    border-radius: 0.08rem;
+    box-shadow: 0.01rem 0.01rem 0.1rem -0.02rem #333;
+}
+
+.search-box {
+    padding: 0.2rem 0.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box .search-right{
+    border-left: 1px solid #fff;
+    height: 0.21rem;
+    line-height: 0.21rem;
+    padding: 0 0.2rem;
+}
+
+.search-box input {
+    padding-left: 0.3rem;
+    background-color: transparent;
+    border: 0;
+    font-size: #fff;
+    background: url(../images/serch.png) 0.04rem center no-repeat;
+    background-size: 0.15rem;
+    height: 0.3rem;
+    display: block;
+    color: #fff;
+}
+
+.search-box input:focus{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.timer input::-webkit-input-placeholder,
+.article-box .title::-webkit-input-placeholder,
+.article-box .details::-webkit-input-placeholder,
+.search-box input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.timer input::-moz-input-placeholder,
+.article-box .title::-moz-input-placeholder,
+.article-box .details::-moz-input-placeholder,
+.search-box input::-moz-input-placeholder {
+    color: #fff;
+}
+
+.timer input::-ms-input-placeholder,
+.article-box .title::-ms-input-placeholder,
+.article-box .details::-ms-input-placeholder,
+.search-box input::-ms-input-placeholder {
+    color: #fff;
+}
+
+.article-box{
+    display: flex;
+    flex-direction: column;
+    padding: 0.1rem;
+}
+
+.article-box .title{
+    color: #fff;
+    border: 1px solid #fff;
+    display: block;
+    background-color: transparent;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    padding: 0 10px;
+    font-size: 0.14rem;
+    margin: 0.06rem 0 0.16rem;
+}
+
+.article-box .details{
+    padding: 0.1rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    height: 3rem;
+    color: #fff;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+}
+
+.article-box .timer{
+    background: url(../images/clock.png) 3.1rem center no-repeat;
+}
+
+.department select,
+.timer input{
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    display: inline-block;
+    width: 1.6rem;
+}
+
+.department select option{
+    color: #000;
+}
+
+.article-box .department{
+    background: url(../images/department.png) 3.1rem center no-repeat;
+}
+
+.article-box .department,
+.article-box .timer,
+.article-box .article-btns{
+    font-size: 0.12rem;
+    line-height: 0.3rem;
+    height: 0.3rem;
+    border: 1px solid #fff;
+    border-top: 0;
+    padding: 0 0.1rem;
+    background-size: 0.14rem;
+}
+
+.article-box .article-btns{
+    display: flex;
+}
+.article-box .article-btns a{
+    color: #fff;
+    display: block;
+    width: 50%;
+    text-align: center;
+}
+
+.article-box .article-btns a+a{
+    border-left: 1px solid #fff;
+}
