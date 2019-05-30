@@ -28,12 +28,12 @@ body{
     background-repeat: no-repeat;
 }
 .content form button{
-    width:1.23rem;
-    height:0.27rem;
+    width:2.87rem;
+    height:0.4rem;
     display: block;
     margin: 0 auto;
     font-size: 0.18rem;
     color: #fff;
-    background:rgba(255,255,255,0.48);
+    background:rgba(255,255,255,0.5);
     border-radius:0.08rem;
 }

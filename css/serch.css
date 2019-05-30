@@ -1,6 +1,7 @@
 .content{
     overflow: inherit;
     margin-top: 0.22rem;
+    /* width: 3.19rem; */
 }
 .box{
     height: 4rem;
@@ -22,7 +23,7 @@
     width: 3.44rem;
     margin: 0.2rem auto;
     text-align: center;
-    font-size: 0.11rem;
+    font-size: 0.14rem;
     position: absolute;
     left: 0;
     right: 0;
@@ -40,8 +41,3 @@
     color: #fff;
 }
 
-@media screen and (max-width:360px){
-    .content{
-        width: 3.19rem;
-    }
-}

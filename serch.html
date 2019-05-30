@@ -5,45 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>智慧财税</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/serch.css">
-    <script src="js/rem.js"></script>
+    
 </head>
 <body>
-    <header></header>
+    <!-- <header></header> -->
     <div class="content">
         <div class="box">
-            <a href="#" class="home"></a>
+            <!-- <a href="#" class="home"></a> -->
             <ul>
-                <li><a href="#">企业全景信息查询</a></li>
+                <li><a href="#" class="loads" data-url="company-search.html">企业全景信息查询</a></li>
                 <li><a href="#">税收统计</a></li>
                 <li><a href="#">减税降费智能分析</a></li>
                 <li><a href="#">社保监管</a></li>
             </ul>
         </div>
     </div>
-    <footer class="text-center">
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="images/serch.png" alt="">
-                    <p>分类查询</p>
-                </a>
-            </li>
-            <li class="center">
-                <a href="#">
-                    <img src="images/person.png" alt="">
-                    <p>个人中心</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/row.png" alt="">
-                    <p>协同治税</p>
-                </a>
-            </li>
-        </ul>
-    </footer>
-    <script src="js/jquery-1.11.0.min.js"></script>
+    
+    <!-- <script src="js/jquery-1.11.0.min.js"></script> -->
+    <script>
+    $(".loads").click(function(){
+        var url = $(this).attr("data-url")
+        $('.loading').show();
+        $("#app").load(url,function(){
+            $('.loading').fadeOut();
+        })
+    })
+    </script>
 </body>
 </html>

@@ -8,6 +8,7 @@
     <title>智慧财税</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/serch.css">
     <script src="js/rem.js"></script>
 </head>
 <body>
@@ -21,112 +22,19 @@
             </form>
         </div>
         <div class="topButton">
-            <button class="home"></button>
+            <button class="home loads" type="button"  data-url="home.html"></button>
             <button class="return"></button>
         </div>
     </header>
-    <div class="content">
-        <div class="supervision">
-            <div class="tip">
-                <div class="radios">
-                    <h2>领导督办</h2>
-                    <p></p>
-                </div>
-            </div>
-        </div>
-        <div class="superContent">
-            <ul>
-                <li>
-                    <div class="left">
-                        <p></p><span>2019年第一季度治税协查</span>
-                    </div>
-                    <div class="right">
-                        <p><img src="images/status.png" alt=""><span>状态：未办</span></p>
-                        <img src="images/right.png" alt="">
-                        <a href="#">查看</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p></p><span>2019年第一季度治税协查</span>
-                    </div>
-                    <div class="right">
-                        <p><img src="images/status.png" alt=""><span>状态：未办</span></p>
-                        <img src="images/right.png" alt="">
-                        <a href="#">查看</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p></p><span>2019年第一季度治税协查</span>
-                    </div>
-                    <div class="right">
-                        <p><img src="images/status.png" alt=""><span>状态：未办</span></p>
-                        <img src="images/right.png" alt="">
-                        <a href="#">查看</a>
-                    </div>
-                </li>
-                <li class="text-center">
-                    <a href="#">
-                        <p></p><p></p><p></p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="content">
-        <div class="supervision">
-            <div class="tip">
-                <div class="radios">
-                    <h2>关注事项</h2>
-                    <p></p>
-                </div>
-            </div>
-        </div>
-        <div class="superContent">
-            <ul>
-                <li>
-                    <div class="left">
-                        <p></p><span>2019年第一季度治税协查</span>
-                    </div>
-                    <div class="right">
-                        <p><img src="images/status.png" alt=""><span>状态：未办</span></p>
-                        <img src="images/right.png" alt="">
-                        <a href="#">督办</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p></p><span>2019年第一季度治税协查</span>
-                    </div>
-                    <div class="right">
-                        <p><img src="images/status.png" alt=""><span>状态：未办</span></p>
-                        <img src="images/right.png" alt="">
-                        <a href="#">督办</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <p></p><span>2019年第一季度治税协查</span>
-                    </div>
-                    <div class="right">
-                        <p><img src="images/status.png" alt=""><span>状态：未办</span></p>
-                        <img src="images/right.png" alt="">
-                        <a href="#">督办</a>
-                    </div>
-                </li>
-                <li class="text-center">
-                    <a href="#">
-                        <p></p><p></p><p></p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <div id="app">
+
+    
+    
+</div>
     <footer class="text-center">
         <ul>
             <li>
-                <a href="#">
+                <a href="#" class="loads" data-url="serch.html">
                     <img src="images/serch.png" alt="">
                     <p>分类查询</p>
                 </a>
@@ -145,9 +53,10 @@
             </li>
         </ul>
     </footer>
+    <div class="loading"></div>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script>
-        $('.serchForm button').click(function(event){
+        $('.serchForm .form button').click(function(event){
             $(this).siblings().animate({
                 "width":"1.5rem",
                 "padding":"0 0.25rem 0 0.08rem"
@@ -155,13 +64,41 @@
             $(this).siblings().focus()
             event.stopPropagation();
         })
-        $(document).click(function(){
-            $('.serchForm input').animate({
-                "width":"0",
-                "padding":"0"
-            });
-            $('.serchForm button').blur()
+        // $(document).click(function(){
+        //     $('.serchForm input').animate({
+        //         "width":"0",
+        //         "padding":"0"
+        //     });
+        //     $('.serchForm button').blur()
+        // })
+        var tabs = $('.tab-head').find('h2') ,
+        contents = $('.tab-content').find('.tdiv');
+
+    (function changeTab(tab) {
+        for(var i = 0, len = tabs.length; i < len; i++) {
+            tabs[i].onmouseover = showTab;
+        }
+    })();
+
+    function showTab() {
+        for(var i = 0, len = tabs.length; i < len; i++) {
+            if(tabs[i] === this) {
+                tabs.eq(i).addClass('selected') ;
+                contents.eq(i).addClass('show') ;
+            } else {
+                tabs.eq(i).removeClass('selected') ;
+                contents.eq(i).removeClass('show') ;
+            }
+        }
+    }
+    $("#app").load("home.html")
+    $(".loads").click(function(){
+        var url = $(this).attr("data-url")
+        $('.loading').show();
+        $("#app").load(url,function(){
+            $('.loading').fadeOut();
         })
+    })
     </script>
 </body>
 </html>

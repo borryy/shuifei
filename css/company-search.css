@@ -21,6 +21,7 @@
     font-weight: normal;
     line-height: 0.28rem;
     border-bottom: 0;
+    background: none;
 }
 
 .tab-content {
@@ -34,8 +35,8 @@
 }
 
 .tabdiv .selected {
-    background:#47678f;
-    border:1px solid #47678f;
+    background:#47678f!important;
+    border:1px solid #47678f!important;
 }
 
 .tab-content .show{
@@ -61,6 +62,10 @@
     border-radius: 2px;
     color: #194373;
     font-size: 0.12rem;
+}
+.box ul{
+    margin: 0 auto;
+    font-size: 0.14rem;
 }
 .showHistory{
     display: none;
