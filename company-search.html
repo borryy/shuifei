@@ -12,9 +12,11 @@
     <div class="content">
         <div class="box">
             <!-- <a href="#" class="home"></a> -->
-            <ul>
-                <li><a href="#">企业全景信息查询</a></li>
-            </ul>
+            <h4 class="pointer">
+                    <div class="pointer-left"></div>
+                    <a href="javascript:;" class="loads" data-url="company-search.html">企业全景信息查询</a>
+                    <div class="pointer-right"></div>
+                </h4>
             <div class="tabdiv">
                 <div class="tab-head">
                     <h2 class="selected">企业名称</h2>
@@ -130,7 +132,7 @@
     $(document).on("blur",".tdiv input",function(){
         $(this).siblings(".showHistory").slideUp();
     })
-    historys = "search.html"
+    historys = "serch.html"
     $(".loads").click(function(){
         var url = $(this).attr("data-url")
         historys = "company-serch.html"

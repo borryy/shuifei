@@ -1,8 +1,8 @@
 
 .model{
     padding: 0.2rem 0;
-    width: 3.18rem;
-    margin: 0.5rem auto 0.2rem;
+    width: 3.6rem;
+    margin: 0.22rem auto 0.2rem;
     background-color: #013065;
     color: #fff;
     border-radius: 0.08rem;
@@ -33,7 +33,7 @@
 
 .table td,
 .table th{
-    font-size: 0.11rem;
+    font-size: 0.12rem;
     vertical-align: center;
     text-align: center;
     width: 1.51rem;

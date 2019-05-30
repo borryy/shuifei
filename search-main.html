@@ -12,9 +12,11 @@
     <div class="content">
         <div class="box">
             <!-- <a href="#" class="home"></a> -->
-            <ul>
-                <li><a href="#">企业全景信息查询</a></li>
-            </ul>
+            <h4 class="pointer">
+                    <div class="pointer-left"></div>
+                    <a href="javascript:;" class="loads" data-url="company-search.html">企业全景信息查询</a>
+                    <div class="pointer-right"></div>
+                </h4>
             <div class="serch-index">
                 <input type="text">
                 <button></button>
@@ -42,7 +44,7 @@
                         <button>税务登记信息</button>
                         <button>电力登记信息</button>
                         <button>国土登记信息</button>
-                        <button>企业业务信息展示</button>
+                        <button class="loads" data-url="service-info.html">企业业务信息展示</button>
                     </div>
                 </div>
                 <div class="main-list">
@@ -101,6 +103,15 @@
     })
     $(document).on("blur",".tdiv input",function(){
         $(this).siblings(".showHistory").slideUp();
+    })
+    historys = "company-search.html"
+    $(".loads").click(function(){
+        var url = $(this).attr("data-url")
+        historys = "search-main.html"
+        $('.loading').show();
+        $("#app").load(url,function(){
+            $('.loading').fadeOut();
+        })
     })
     </script>
 </body>

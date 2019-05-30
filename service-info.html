@@ -12,9 +12,11 @@
     <div class="content">
         <div class="box">
             <!-- <a href="#" class="home"></a> -->
-            <ul>
-                <li><a href="#">企业全景信息查询</a></li>
-            </ul>
+            <h4 class="pointer">
+                    <div class="pointer-left"></div>
+                    <a href="javascript:;" class="loads" data-url="company-search.html">企业全景信息查询</a>
+                    <div class="pointer-right"></div>
+                </h4>
             <div class="serch-index">
                 <input type="text">
                 <button></button>
@@ -22,7 +24,7 @@
             <div class="serch-content">
                 <h1 class="text-center">穷奇科技石家庄有限公司-企业业务信息</h1>
                 <div class="lists">
-                    <p style="border:1px solid rgb(42, 165, 42)">税务信息</p>
+                    <p style="border:1px solid rgb(42, 165, 42)" class="loads" data-url="service-echarts.html">税务信息</p>
                     <p style="border:1px solid rgb(200, 230, 34)">用电信息</p>
                     <p style="border:1px solid rgb(164, 163, 168)">用水信息</p>
                     <p style="border:1px solid rgb(165, 42, 58)">用气信息</p>
@@ -60,6 +62,15 @@
     })
     $(document).on("blur",".tdiv input",function(){
         $(this).siblings(".showHistory").slideUp();
+    })
+    historys = "search-main.html"
+    $(".loads").click(function(){
+        var url = $(this).attr("data-url")
+        historys = "service-info.html"
+        $('.loading').show();
+        $("#app").load(url,function(){
+            $('.loading').fadeOut();
+        })
     })
     </script>
 </body>

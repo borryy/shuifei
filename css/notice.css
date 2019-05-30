@@ -59,7 +59,9 @@
 .search-box input::-ms-input-placeholder {
     color: #fff;
 }
-
+.article-box .details{
+    font-family: 微软雅黑;
+}
 .article-box{
     display: flex;
     flex-direction: column;
@@ -129,7 +131,7 @@
 .article-box .article-btns a{
     color: #fff;
     display: block;
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 

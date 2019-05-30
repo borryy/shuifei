@@ -5,9 +5,12 @@
 }
 .box{
     height: 4rem;
-    background-color: #194373;
+    background-color: #013065;
     padding-top: 0.08rem;
     box-sizing: border-box;
+}
+h4.pointer{
+    height: 0.35rem;
 }
 .box a.home{
     width: 0.29rem;

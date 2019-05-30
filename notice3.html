@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智慧财税</title>
+    <link rel="stylesheet" href="css/notice.css">
+</head>
+
+<body>
+    
+    <div>
+        <div class="model">
+                <h4 class="pointer">
+                        <div class="pointer-left"></div>
+                        <a href="javascript:;" class="loads" data-url="notice3.html">核查结果反馈</a>
+                        <div class="pointer-right"></div>
+                    </h4>
+            <div class="article-box" style="font-size:0.12rem;text-indent: 2em;line-height: 0.25rem;">
+                税务预警，也称税务风险预警或税负预警等。我想你所说的是税负预警。这是税务机关为了加强对增值税一般纳税人的管理，防止出现零、负申报，控制税负偏低的纳税人而采取的一项征管措施。它主要是针对纳税人生产经营的特定产品、品种，经过对辖区内所有纳税单位的调查而得出一个平均税收负担率。如中药材税负预警1.6%、淀粉加工1.8%等等，也就是说纳税人在一定时期的税负在预警线以上，税务机关就不过份监管，如果低于预警线，税务机关就要分析原因，进行纳税评估。这是防止纳税人虚构经济业务、虚开增值税专用发票、加强重点税源管理的一种方法
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery-1.11.0.min.js"></script>
+    
+    <script>
+            historys = "coordination.html"
+        $(".loads").click(function(){
+            var url = $(this).attr("data-url")
+            historys = "notice.html"
+            $('.loading').show();
+            $("#app").load(url,function(){
+                $('.loading').fadeOut();
+            })
+        })
+       
+        </script>
+</body>
+
+</html>
