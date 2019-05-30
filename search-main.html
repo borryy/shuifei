@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智慧财税</title>
+    <link rel="stylesheet" href="css/serch.css">
+    <link rel="stylesheet" href="css/serch-main.css">
+</head>
+<body>
+    <div class="content">
+        <div class="box">
+            <!-- <a href="#" class="home"></a> -->
+            <ul>
+                <li><a href="#">企业全景信息查询</a></li>
+            </ul>
+            <div class="serch-index">
+                <input type="text">
+                <button></button>
+            </div>
+            <div class="serch-content">
+                <h5>共搜到2条结果</h5>
+                <div class="main-list">
+                    <div class="msg-list">
+                        <div class="list-li">
+                            穷奇科技石家庄有限公司
+                        </div>
+                        <div class="list-li">
+                            统一社会信用代码：91130108MA09YHRK2L
+                        </div>
+                        <div class="list-li">
+                            法定代表人：刘斌
+                        </div>
+                        <div class="list-li">
+                            成立日期：2018年04月08日 
+                        </div>
+                        
+                    </div>
+                    <div class="button-list">
+                        <button>工商登记信息</button>
+                        <button>税务登记信息</button>
+                        <button>电力登记信息</button>
+                        <button>国土登记信息</button>
+                        <button>企业业务信息展示</button>
+                    </div>
+                </div>
+                <div class="main-list">
+                        <div class="msg-list">
+                            <div class="list-li">
+                                穷奇科技石家庄有限公司
+                            </div>
+                            <div class="list-li">
+                                统一社会信用代码：91130108MA09YHRK2L
+                            </div>
+                            <div class="list-li">
+                                法定代表人：刘斌
+                            </div>
+                            <div class="list-li">
+                                成立日期：2018年04月08日 
+                            </div>
+                            
+                        </div>
+                        <div class="button-list">
+                            <button>工商登记信息</button>
+                            <button>税务登记信息</button>
+                            <button>电力登记信息</button>
+                            <button>国土登记信息</button>
+                            <button>企业业务信息展示</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+    var tabs = $('.tab-head').find('h2') ,
+        contents = $('.tab-content').find('.tdiv');
+
+    (function changeTab(tab) {
+        for(var i = 0, len = tabs.length; i < len; i++) {
+            tabs[i].onmouseover = showTab;
+        }
+    })();
+
+    function showTab() {
+        for(var i = 0, len = tabs.length; i < len; i++) {
+            if(tabs[i] === this) {
+                tabs.eq(i).addClass('selected') ;
+                contents.eq(i).addClass('show') ;
+            } else {
+                tabs.eq(i).removeClass('selected') ;
+                contents.eq(i).removeClass('show') ;
+            }
+        }
+    }
+    
+    $(document).on("focus",".tdiv input",function(){
+        $(this).siblings(".showHistory").slideDown();
+    })
+    $(document).on("blur",".tdiv input",function(){
+        $(this).siblings(".showHistory").slideUp();
+    })
+    </script>
+</body>
+</html>
