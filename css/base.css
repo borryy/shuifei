@@ -112,12 +112,12 @@ header{
     background-size: 100%;
 }
 .topButton .return{
-    background-image: url(../images/row.png);
+    background-image: url(../images/return.png);
     margin-left: 0.175rem;
 }
 footer{
     width: 100%;
-    height: 0.38rem;
+    height: 0.45rem;
     font-size: 0.12rem;
     color: #fff;
     background-color: #013065;

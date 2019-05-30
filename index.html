@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/serch.css">
     <script src="js/rem.js"></script>
+    <script>
+    var historys = '';
+    </script>
 </head>
 <body>
     <header>
@@ -91,13 +94,29 @@
             }
         }
     }
-    $("#app").load("home.html")
+    $("#app").load("home.html");
+    console.log(historys)
     $(".loads").click(function(){
         var url = $(this).attr("data-url")
+        historys = "home.html"
         $('.loading').show();
         $("#app").load(url,function(){
             $('.loading').fadeOut();
         })
+        console.log(historys)
+    })
+    $(".return").click(function(){
+        $('.loading').show();
+        if(historys == ''){
+            $("body").load("login.html",function(){
+                $('.loading').fadeOut();
+            })
+        }else{
+            $("#app").load(historys,function(){
+                $('.loading').fadeOut();
+            })
+        }
+        
     })
     </script>
 </body>

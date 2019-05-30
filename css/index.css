@@ -105,7 +105,10 @@
     background-color: #fff;
     align-self: center;
 }
-
+.superContent ul li.text-center a img{
+    width: 0.18rem;
+    padding-top: 0.08rem;
+}
 
 
 .tabdiv{

@@ -20,12 +20,12 @@
     background-repeat: no-repeat;
 }
 .box ul{
-    width: 3.44rem;
-    margin: 0.2rem auto;
+    width: 3.9rem;
+    margin: 0 auto;
     text-align: center;
     font-size: 0.14rem;
     position: absolute;
-    left: 0;
+    left: -0.08rem;
     right: 0;
 }
 .box ul li {
