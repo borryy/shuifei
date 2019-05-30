@@ -20,7 +20,7 @@
                     <h2 class="selected">企业名称</h2>
                     <h2>新编码查询</h2>
                     <h2>工商注册码</h2>
-                    <h2>法人</h2>
+                    <h2>信用评定</h2>
                 </div>
                 <div class="tab-content">
                     <div class="show tdiv">
@@ -39,7 +39,7 @@
                                 <p class="right"><img src="images/delete.png" alt=""></p>
                             </div>
                         </div>
-                        <button>企业查询</button>
+                        <button class="loads" data-url="search-main.html">企业查询</button>
                     </div>
                     <div class="tdiv">
                         <input type="text" placeholder="在此输入您要查询的内容">
@@ -93,7 +93,7 @@
                                 <p class="right"><img src="images/delete.png" alt=""></p>
                             </div>
                         </div>
-                        <button>法人查询</button>
+                        <button>信用评定查询</button>
                     </div>
                 </div>
             </div>
@@ -129,6 +129,15 @@
     })
     $(document).on("blur",".tdiv input",function(){
         $(this).siblings(".showHistory").slideUp();
+    })
+    historys = "search.html"
+    $(".loads").click(function(){
+        var url = $(this).attr("data-url")
+        historys = "company-serch.html"
+        $('.loading').show();
+        $("#app").load(url,function(){
+            $('.loading').fadeOut();
+        })
     })
     </script>
 </body>
