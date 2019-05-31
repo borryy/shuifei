@@ -105,7 +105,7 @@
         $(this).siblings(".showHistory").slideUp();
     })
     historys = "company-search.html"
-    $(".loads").click(function(){
+    $(".loads").off("click").on("click",function(){
         var url = $(this).attr("data-url")
         historys = "search-main.html"
         $('.loading').show();

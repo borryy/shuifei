@@ -46,8 +46,9 @@
     <script src="js/mobiscroll_003.js" type="text/javascript"></script>
     <script src="js/mobiscroll_005.js" type="text/javascript"></script>
     <script>
+
         historys = "coordination.html"
-        $(".loads").click(function () {
+        $(".loads").off("click").on("click", function () {
             var url = $(this).attr("data-url")
             historys = "notice.html"
             $('.loading').show();
@@ -79,7 +80,7 @@
                 layer.open({
                     content: '发送成功'
                     , btn: '确定'
-                    , yes: function(index){
+                    , yes: function (index) {
                         location.href = "/";
                     }
                 });

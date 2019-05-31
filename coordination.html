@@ -46,8 +46,8 @@
     <!-- <script src="js/jquery-1.11.0.min.js"></script> -->
     <script>
         historys = "home.html"
-    $(".loads").click(function(){
-        var url = $(this).attr("data-url")
+        $(".loads").off("click").on("click",function(){
+            var url = $(this).attr("data-url")
         historys = "coordination.html"
         $('.loading').show();
         $("#app").load(url,function(){

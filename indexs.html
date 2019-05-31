@@ -102,16 +102,7 @@
         }
     }
     $("#app").load("home.html");
-    console.log(historys)
-    $(".loads").click(function(){
-        var url = $(this).attr("data-url")
-        historys = "home.html"
-        $('.loading').show();
-        $("#app").load(url,function(){
-            $('.loading').fadeOut();
-        })
-        console.log(historys)
-    })
+    
     $(".return").click(function(){
         $('.loading').show();
         if(historys == ''){

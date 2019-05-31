@@ -133,7 +133,7 @@
         $(this).siblings(".showHistory").slideUp();
     })
     historys = "serch.html"
-    $(".loads").click(function(){
+    $(".loads").off("click").on("click",function(){
         var url = $(this).attr("data-url")
         historys = "company-serch.html"
         $('.loading').show();
