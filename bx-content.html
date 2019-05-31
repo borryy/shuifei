@@ -191,7 +191,7 @@
                 <div class="tab-content">
                     <div class="show tdiv">
                         <div class="serch-content">
-                                <div class="select" id="screening-btn"> 
+                                <div class="select screenings" id="screening-btn"> 
                                         --选择税种--
                                     <!-- <select id="orderTimeDataSel" class="text"> 
                                         <option>--选择税种--</option> 
@@ -211,16 +211,17 @@
                     </div>
                     <div class="tdiv">
                         <div class="serch-content">
-                            <div class="select"> 
-                                <select id="orderTimeDataSel" class="text"> 
+                                <div class="select screenings"  id="screening-btn"> 
+                                        --选择税种--
+                                    <!-- <select id="orderTimeDataSel" class="text"> 
                                         <option>--选择税种--</option> 
                                         <option>增值税</option>
                                         <option>企业所得税</option>
                                         <option>个人所得税</option>
                                         <option>文化事业建设税</option>
-                                        <option>消费税</option> 
-                                </select> 
-                            </div> 
+                                        <option>消费税</option>
+                                    </select>  -->
+                                </div> 
                             <div class="times">
                                 <input value="" placeholder="查询时段开始时间" class="left" readonly="readonly" name="appDate2" id="appDate2" type="text">
                                 <input value="" placeholder="查询时段结束时间" class="right" readonly="readonly" name="appDate3" id="appDate3" type="text">
@@ -230,7 +231,7 @@
                     </div>
                     <div class="tdiv">
                             <div class="serch-content">
-                                    <div class="select" id="screening-btn"> 
+                                    <div class="select screenings"  id="screening-btn"> 
                                             --选择税种--
                                         <!-- <select id="orderTimeDataSel" class="text"> 
                                             <option>--选择税种--</option> 
@@ -383,7 +384,7 @@
         // });
     </script>
     <script>
-         $("#screening-btn").click(function (events) {
+         $(".screenings").click(function (events) {
                 $("#screening-dialog").fadeIn();
                 $("#screening-dialog .dialog-btns a").click(function () {
                     $("#screening-dialog").fadeOut();
