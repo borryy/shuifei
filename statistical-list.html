@@ -164,7 +164,16 @@
                 }
             });
         }
-        historys = "statistical-home.html"
+        historys = "serch.html"
+        $(".loads").off("click").on("click", function () {
+            var url = $(this).attr("data-url")
+            historys = "statistical-list.html"
+            $(".loads").off("click")
+            $('.loading').show();
+            $("#app").load(url, function () {
+                $('.loading').fadeOut();
+            });
+        });
     </script>
 </body>
 

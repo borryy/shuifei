@@ -20,9 +20,9 @@
             <h2 class="miss">关注事项</h2>
         </div>
         <div class="screen">
-            <div class="px screen-list miss">排序</div>
-            <div class="status screen-list">状态筛选</div> 
-            <div class="time screen-list">日期筛选</div>
+            <div class="px screen-list miss">排序<img src="./images/desc.svg" alt=""></div>
+            <div class="status screen-list">状态筛选<img src="./images/screen.svg" alt=""></div> 
+            <div class="time screen-list">日期筛选<img src="./images/date.svg" alt=""></div>
             <div class="screen-con">
                 <div class="time-screen">
                     <input type="text" id="appDate" placeholder="日期筛选开始时间">
@@ -39,6 +39,66 @@
             <div class="content show tdiv">
                 <div class="superContent">
                     <ul>
+                        <li>
+                            <div class="left">
+                                <span>2019年第一季度治税协查</span>
+                            </div>
+                            <div class="right">
+                                <p><span>未办</span></p>
+                                <img src="images/right.png" alt="">
+                                <a href="#">查看</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>2019年第一季度治税协查</span>
+                            </div>
+                            <div class="right">
+                                <p><span>未办</span></p>
+                                <img src="images/right.png" alt="">
+                                <a href="#">查看</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>2019年第一季度治税协查</span>
+                            </div>
+                            <div class="right">
+                                <p><span>未办</span></p>
+                                <img src="images/right.png" alt="">
+                                <a href="#">查看</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>2019年第一季度治税协查</span>
+                            </div>
+                            <div class="right">
+                                <p><span>未办</span></p>
+                                <img src="images/right.png" alt="">
+                                <a href="#">查看</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>2019年第一季度治税协查</span>
+                            </div>
+                            <div class="right">
+                                <p><span>未办</span></p>
+                                <img src="images/right.png" alt="">
+                                <a href="#">查看</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <span>2019年第一季度治税协查</span>
+                            </div>
+                            <div class="right">
+                                <p><span>未办</span></p>
+                                <img src="images/right.png" alt="">
+                                <a href="#">查看</a>
+                            </div>
+                        </li>
                         <li>
                             <div class="left">
                                 <span>2019年第一季度治税协查</span>
@@ -431,13 +491,23 @@
         })
         $("#app").scroll(function() {
             var scroH = $("#app").scrollTop();  //滚动高度
-            if(scroH >20){  //距离顶部大于20px时
+            if(scroH >10){  //距离顶部大于20px时
                 $('.tabdiv .screen').css({
+                    "position": "fixed",
+                    "top": "1.2rem",
+                    "width": "3.6rem"
+                })
+                $('.tabdiv .tab-head').css({
                     "position": "fixed",
                     "top": "0.8rem",
                     "width": "3.6rem"
                 })
             }else{
+                $('.tabdiv .tab-head').css({
+                    "position": "relative",
+                    "top": "0",
+                    "width": "3.6rem"
+                })
                 $('.tabdiv .screen').css({  
                     "position": "relative",
                     "top": "0",

@@ -86,3 +86,21 @@
 .report+.report{
     border-left: 1px solid #fff;
 }
+.pointer .pointer-center a{
+    display: block;
+    text-align: center;
+}
+.pointer .pointer-center a img{
+    width: 0.3rem;
+    margin-top: -0.1rem;
+
+}
+.center-list .pointer  a {
+    overflow: hidden;
+}
+.center-list .pointer  a  img{
+    width: 0.17rem;
+    float: left;
+    padding-top: 0.2rem;
+    padding-right: 0.05rem;
+}
