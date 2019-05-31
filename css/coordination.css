@@ -14,7 +14,8 @@ h4.pointer {
 
 .topic .send-btn {
     margin-right: 0.1rem;
-    box-shadow: 0.01rem 0.01rem 0.1rem -0.01rem #999;
+    box-shadow: 0.01rem 0.01rem 0.1rem #999;
+    border: 0.01rem solid #888;
     width: 1.5rem;
     background: url(../images/send-btn.png) center center no-repeat;
     background-size: auto 0.16rem;
