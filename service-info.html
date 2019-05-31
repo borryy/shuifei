@@ -68,6 +68,7 @@
         var url = $(this).attr("data-url")
         historys = "service-info.html"
         $('.loading').show();
+        $(".loads").off("click")
         $("#app").load(url,function(){
             $('.loading').fadeOut();
         })

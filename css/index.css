@@ -120,6 +120,81 @@
     overflow: hidden;
    
 }
+.tabdiv .tdiv{
+    margin-top: 0;
+}
+.tabdiv .screen{
+    width: 100%;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    background-color: #013065;
+    display: flex;
+    /* justify-content:; */
+    justify-content: center;
+    font-size: 0.12rem;
+    color: #fff;
+    border-radius: 0.06rem;
+    border: 1px solid #fff;
+    position: relative;
+}
+.tabdiv .screen .screen-con{
+    position: absolute;
+    width: 100%;
+    height: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 0.3rem;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: none;
+    
+}
+.tabdiv .screen .screen-con .time-screen,.tabdiv .screen .screen-con .status-screen{
+    display: flex;
+    justify-content: center;
+}
+.tabdiv .screen .screen-con .status-screen button{
+    width: 0.5rem;
+    height: 0.3rem;
+    background: #013065;
+    border-radius: 0.06rem;
+    color: #fff;
+    font-size: 0.12rem;
+    margin: 0.06rem;
+     margin-top: 0.1rem;
+}
+.tabdiv .screen .screen-con .time-screen input{
+    width: 30%;
+    height: 0.25rem;
+    background-color: none;
+    border: 1px solid #013065;
+    border-radius: 0.05rem;
+    margin: 0.04rem;
+    margin-top: 0.1rem;
+    padding-left: 0.08rem;
+    box-sizing: border-box;
+    font-size: 0.12rem;
+}
+.tabdiv .screen .screen-con .time-screen button{
+    width: 0.5rem;
+    height: 0.3rem;
+    margin-top: 0.07rem;
+    border-radius: 0.06rem;
+    font-size: 0.12rem;
+    background-color: #013065;
+    color: #fff;
+}
+.tabdiv .screen .screen-list{
+    /* background-color: rgba(255, 255, 255, 0.2); */
+   
+    width: 33.33%;
+    text-align: center;
+    padding: 0 0.08rem;
+}
+.tabdiv .tab-head{
+    overflow: hidden;
+}
 .tabdiv h2 {
     opacity: 1;
     border-radius: 0.06rem;
@@ -140,7 +215,7 @@
 .tab-content {
     /* border: solid cornflowerblue 1px; */
     width: 100%;
-    padding-top: 0.28rem;
+    /* padding-top: 0.28rem; */
 }
 
 .tab-content .tdiv{
@@ -149,7 +224,7 @@
 
 .tabdiv .selected {
     background:#013065;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
     color: #fff;
 }
 

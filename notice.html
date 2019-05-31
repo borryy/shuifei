@@ -52,7 +52,9 @@
             var url = $(this).attr("data-url")
             historys = "notice.html"
             $('.loading').show();
-            $("#app").load(url, function () {
+            $(".loads").off("click")
+            $("#app").load(url,function(){
+
                 $('.loading').fadeOut();
             })
         })
