@@ -47,13 +47,16 @@
     <script>
         historys = "home.html"
         $(".loads").off("click").on("click",function(){
-        var url = $(this).attr("data-url")
-        historys = "serch.html"
-        $('.loading').show();
-        $("#app").load(url,function(){
-            $('.loading').fadeOut();
+            var url = $(this).attr("data-url")
+            historys = "serch.html"
+            $("#app").html('');
+            $('.loading').show();
+            $(".loads").off("click")
+            $("#app").load(url,function(){
+                $('.loading').fadeOut();
+                
+            })
         })
-    })
     </script>
 </body>
 </html>

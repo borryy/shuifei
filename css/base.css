@@ -86,19 +86,20 @@ header {
 
 .serchForm .form {
     position: relative;
+    display: flex;
 }
 
 .serchForm input {
-    width: 0;
+    width: 1.4rem;
     height: 0.3rem;
     font-size: 0.12rem;
     border: 0;
     background-color: rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
     color: #fff;
-    padding-left: 5px;
-    padding: 0;
-    border-radius: 0.08rem;
+    padding: 0 0.08rem 0 0.28rem;
+    border-top-left-radius: 0.08rem;
+    border-bottom-left-radius: 0.08rem;
 }
 
 .serchForm button {
@@ -111,10 +112,21 @@ header {
     background-position: center center;
     color: #fff;
     position: absolute;
-    right: 0.06rem;
+    /* right: 0.64rem; */
+    left: 0.05rem;
     top: 0;
 }
-
+.serchForm span{
+    font-size: 0.12rem;
+    color: #fff;
+    display: block;
+    background-color: rgba(255,255,255,0.4);
+    padding-right: 0.08rem;
+    padding-left: 0.08rem;
+    line-height: 0.3rem;
+    border-top-right-radius: 0.08rem;
+    border-bottom-right-radius: 0.08rem;
+}
 .topButton {
     height: 0.3rem;
     display: flex;
@@ -168,7 +180,21 @@ footer ul li {
     display: block;
     float: left;
 }
-
+footer ul li.active{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+footer ul li.active .img1{
+    display: none;
+}
+footer ul li.active .img2{
+    display: inline-block;
+}
+footer ul li .img1{
+    display: inline-block;
+}
+footer ul li .img2{
+    display: none;
+}
 footer ul li img {
     width: 0.145rem;
 }
@@ -260,4 +286,14 @@ h4.pointer {
     position: absolute;
     bottom: -0.05rem;
     right: 0;
+}
+.dw ,.android-ics .dww .dw-li,.android-ics .dwv,.dwbg .dwb{
+    font-size: 0.12rem;
+}
+.dwwr{
+    width: 2.58rem!important;
+}
+.android-ics .dw .dwb,.android-ics .dwv{
+    height: 0.36rem;
+    line-height: 0.36rem;;
 }

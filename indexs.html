@@ -25,6 +25,7 @@
                 <div class="form">
                     <input type="text" class="serchInput">
                     <button type="button"></button>
+                    <span>全能搜索</span>
                 </div>
             </form>
         </div>
@@ -36,28 +37,32 @@
     <div id="app"></div>
     <footer class="text-center">
         <ul>
-            <li>
-                <a href="#" class="loads" data-url="home.html">
-                    <img src="images/home.png" alt="">
+            <li class="active">
+                <a href="#" class="loads" data-src="images/home1.png" data-url="home.html">
+                    <img class="img1" src="images/home.png" alt="">
+                    <img class="img2" src="images/home1.png" alt="">
                     <p>首页</p>
                 </a>
             </li>
             <li>
-                <a href="#" class="loads" data-url="serch.html">
-                    <img src="images/serch.png" alt="">
+                <a href="#" class="loads" data-src="images/serch1.png" data-url="serch.html">
+                    <img class="img1" src="images/serch.png" alt="">
+                    <img class="img2" src="images/serch1.png" alt="">
                     <p>分类查询</p>
                 </a>
             </li>
            
             <li>
-                <a href="#" class="loads" data-url="coordination.html">
-                    <img src="images/row.png" alt="">
+                <a href="#" class="loads" data-src="images/row1.png" data-url="coordination.html">
+                    <img class="img1" src="images/row.png" alt="">
+                    <img class="img2" src="images/row1.png" alt="">
                     <p>协同治税</p>
                 </a>
             </li>
             <li>
-                <a href="#" class="loads" data-url="director.html">
-                    <img src="images/persons.png" alt="">
+                <a href="#" data-src="images/persons1.png" class="loads" data-url="director.html">
+                    <img class="img1" src="images/persons.png" alt="">
+                    <img class="img2" src="images/persons1.png" alt="">
                     <p>个人中心</p>
                 </a>
             </li>
@@ -66,21 +71,7 @@
     <div class="loading"></div>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script>
-        $('.serchForm .form button').click(function(event){
-            $(this).siblings().animate({
-                "width":"1.5rem",
-                "padding":"0 0.25rem 0 0.08rem"
-            });
-            $(this).siblings().focus()
-            event.stopPropagation();
-        })
-        // $(document).click(function(){
-        //     $('.serchForm input').animate({
-        //         "width":"0",
-        //         "padding":"0"
-        //     });
-        //     $('.serchForm button').blur()
-        // })
+        
         var tabs = $('.tab-head').find('h2') ,
         contents = $('.tab-content').find('.tdiv');
 
@@ -102,7 +93,7 @@
         }
     }
     $("#app").load("home.html");
-    
+   
     $(".return").click(function(){
         $('.loading').show();
         if(historys == ''){
@@ -116,7 +107,10 @@
         }
         
     })
-    
+    $("footer li").click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+    })
     </script>
 </body>
 </html>

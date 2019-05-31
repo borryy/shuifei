@@ -52,6 +52,7 @@
         var url = $(this).attr("data-url")
         historys = "statistical-home.html"
         $('.loading').show();
+        $(".loads").off("click")
         $("#app").load(url,function(){
             $('.loading').fadeOut();
         })
