@@ -310,3 +310,8 @@ h4.pointer {
     /*IE*/
     filter:FlipV;
 }
+
+.layui-m-layerbtn span,
+.layui-m-layercont{
+    font-size: 0.12rem!important;
+}
