@@ -11,7 +11,11 @@ body{
     background-color: #013065;
     overflow: hidden;
     height: 100%;
-    transition: height .4s;
+    transition: height 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .header-box.animate{
@@ -22,7 +26,7 @@ body{
 .logo{
     width: 1rem;
     left: 1.375rem;
-    top: 1.5rem;
+    top: 1rem;
     /* display: block; */
     /* margin: 0 auto; */
     /* margin-top: 1.38rem; */
@@ -31,7 +35,7 @@ body{
 
 .logo.animate{
     width: 0.55rem;
-    animation: logo 2s;
+    animation: logo 1s;
     left: 0.2rem;
     top: 0.125rem;
 }
@@ -40,27 +44,20 @@ body{
     0% {
         width: 1rem;
         left: 1.375rem;
-        top: 1.5rem;
+        top: 1rem;
     }
     10% {
         width: 1rem;
         left: 1.375rem;
-        top: 1.5rem;
+        top: 1rem;
     }
-
-    60% {
-        width: 0.55rem;
-        left: 1.6rem;
-        top: 0.125rem;
-    }
-
     100% {
         left: 0.2rem;
         top: 0.125rem;
     }
 }
 .header-box form{
-    margin-top: 3.08rem;
+    margin-top: 2.58rem;
 }
 .header-box form input{
     width: 2.87rem;

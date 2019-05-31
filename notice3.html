@@ -28,7 +28,7 @@
     
     <script>
             historys = "coordination.html"
-        $(".loads").click(function(){
+            $(".loads").off("click").on("click",function(){
             var url = $(this).attr("data-url")
             historys = "notice.html"
             $('.loading').show();
