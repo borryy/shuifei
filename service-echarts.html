@@ -8,6 +8,11 @@
     
     <link rel="stylesheet" href="css/serch.css">
     <link rel="stylesheet" href="css/serch-main.css">
+    <style>
+     .serch-content{
+            top: 1.8rem;
+        }
+    </style>
 </head>
 <body>
     <div class="content">
@@ -15,15 +20,12 @@
             <!-- <a href="#" class="home"></a> -->
             <h4 class="pointer">
                     <div class="pointer-left"></div>
-                    <a href="javascript:;" class="loads" data-url="company-search.html">企业全景信息查询</a>
+                    <a href="javascript:;">税务信息</a>
                     <div class="pointer-right"></div>
                 </h4>
-            <div class="serch-index">
-                <input type="text">
-                <button></button>
-            </div>
+            
             <div class="serch-content">
-                <h1 class="text-center">穷奇科技石家庄有限公司-税务信息</h1>
+                <h1 class="text-center">穷奇科技石家庄有限公司</h1>
                 <div class="select"> 
                     <select id="orderTimeDataSel" class="text"> 
                         <option>--选择税种--</option> 
@@ -121,6 +123,15 @@
 		  	
         });
         historys = "service-info.html"
+    $(".loads").off("click").on("click",function(){
+        var url = $(this).attr("data-url")
+        historys = "service-echarts.html"
+        $('.loading').show();
+        $(".loads").off("click")
+        $("#app").load(url,function(){
+            $('.loading').fadeOut();
+        })
+    })
     </script>
 </body>
 </html>

@@ -131,6 +131,14 @@
 		  	
         });
         historys = "serch.html"
+    $(".loads").off("click").on("click",function(){
+        var url = $(this).attr("data-url")
+        historys = "service-echarts.html"
+        $('.loading').show();
+        $(".loads").off("click")
+        $("#app").load(url,function(){
+            $('.loading').fadeOut();
+        })})
     </script>
 </body>
 </html>
