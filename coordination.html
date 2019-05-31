@@ -13,7 +13,7 @@
     <div class="content tabdiv">
         <div class="table-box">
             <div class="topic">
-                <span class="send-btn" id="send-btn"></span>
+                <span class="send-btn loads" data-url="notice.html" id="send-btn"></span>
             </div>
             <table class="table-list" cellpadding="0" cellspacing="0">
                 <tr>
@@ -91,9 +91,7 @@
                 $('.loading').fadeOut();
             })
         })
-        $("#send-btn").click(function (events) {
-            $("#app").length && $("#app").load("notice.html");
-        });
+       
         $(".add").click(function(events){
             if($(this).hasClass("active")){
                 $(this).removeClass("active");

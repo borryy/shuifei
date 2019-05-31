@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智慧财税</title>
+    <link rel="stylesheet" href="css/statistical-list.css">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/myPage.css">
+</head>
+
+<body>
+
+    <div>
+        <div class="model">
+            <h4 class="pointer">
+                <div class="pointer-left"></div>
+                <a href="javascript:;">养老保险名单</a>
+                <div class="pointer-right"></div>
+            </h4>
+            <!-- <div class="table-header">
+                <div>企业列表税收排名统计</div>
+                <div class="screening-btn" id="screening-btn">筛选</div>
+            </div> -->
+            <table class="table" border='1' cellspacing="0" cellpadding="0">
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>身份证号</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>2</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>3</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>4</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>5</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>6</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>7</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>8</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>9</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>10</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>12</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>13</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                 <tr>
+                    <td>15</td>
+                    <td>张三</td>
+                    <td>130125199510252013</td>
+                    <td class="loads" data-url="bx-content.html">查看</td>
+                </tr>
+                
+            </table>
+            <div class="page-select">
+                <ul class="pagination" id="page-select"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 弹窗 -->
+    <div class="dialog" id="screening-dialog">
+        <div class="dialog-content">
+            <div class="dialog-header">筛选排名</div>
+            <div class="row">
+                <div class="row-left">排&nbsp;&nbsp;&nbsp;名：</div>
+                <div class="row-right">
+                    <input type="number">
+                    <div class="to">-</div>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-left">纳税额：</div>
+                <div class="row-right">
+                    <input type="number">
+                    <div class="to">-</div>
+                    <input type="number">
+                </div>
+            </div>
+            <div class="dialog-btns">
+                <a href="javascript:;">确定</a>
+                <a href="javascript:;">取消</a>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jqPaginator.min.js"></script>
+    <script>
+        $(function () {
+            $("#screening-btn").click(function (events) {
+                $("#screening-dialog").fadeIn();
+                $("#screening-dialog .dialog-btns a").click(function () {
+                    $("#screening-dialog").fadeOut();
+                })
+            });
+
+            loadpage();
+        });
+        // 分页
+        function exeData(num, type) {
+            loadpage();
+            ;[].map.call($("#page-select li a"),function(item){
+                $(item).removeClass("active");
+                if(item.innerHTML.toString() == num.toString()){
+                    console.log(item.innerHTML, num);
+                    $(item.parentNode).addClass("active");
+                }
+            });
+        }
+        function loadpage() {
+            $.jqPaginator('#page-select', {
+                totalPages: 20,
+                visiblePages: 4,
+                currentPage: 1,
+                first: '<li class="first"><a href="javascript:;">首页</a></li>',
+                prev: '<li class="prev"><a href="javascript:;"><i class="arrow arrow2"></i></a></li>',
+                next: '<li class="next"><a href="javascript:;"><i class="arrow arrow3"></i></a></li>',
+                last: '<li class="last"><a href="javascript:;">末页</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+                onPageChange: function (num, type) {
+                    if (type == "change") {
+                        exeData(num, type);
+                    }
+                }
+            });
+        }
+        historys = "serch.html"
+        $(".loads").off("click").on("click", function () {
+            var url = $(this).attr("data-url")
+            historys = "bx-list.html"
+            $(".loads").off("click")
+            $('.loading').show();
+            $("#app").load(url, function () {
+                $('.loading').fadeOut();
+            });
+        });
+    </script>
+</body>
+
+</html>
