@@ -39,7 +39,7 @@
     background-color: rgba(0, 0, 0, .1);
 }
 
-.timer input::-webkit-input-placeholder,
+/* .timer input::-webkit-input-placeholder,
 .article-box .title::-webkit-input-placeholder,
 .article-box .details::-webkit-input-placeholder,
 .search-box input::-webkit-input-placeholder {
@@ -58,7 +58,7 @@
 .article-box .details::-ms-input-placeholder,
 .search-box input::-ms-input-placeholder {
     color: #fff;
-}
+} */
 .article-box .details{
     font-family: 微软雅黑;
 }
