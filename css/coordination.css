@@ -9,13 +9,13 @@ h4.pointer {
 .topic {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .topic .send-btn {
-    box-shadow: 0 0.02rem 0.1rem -0.04rem #000;
-    /* border: 0.01rem solid #fff; */
-    width: 2rem;
+    margin-right: 0.1rem;
+    box-shadow: 0.01rem 0.01rem 0.1rem -0.01rem #999;
+    width: 1.5rem;
     background: url(../images/send-btn.png) center center no-repeat;
     background-size: auto 0.16rem;
     background-color: rgba(2, 48, 100, 0.9);
@@ -50,6 +50,10 @@ h4.pointer {
     vertical-align: middle;
 }
 
+.table-list th{
+    border-bottom: 0.01rem solid #999;
+}
+
 .table-list tr {
     height: 0.5rem;
     font-size: 0.14rem;
@@ -67,15 +71,15 @@ h4.pointer {
 
 .table-list .eye {
     background: url(../images/eye.png) center center no-repeat;
-    background-size: auto 0.1rem;
+    background-size: auto 0.12rem;
 }
 
 .table-list .add {
     background: url(../images/add.png) center center no-repeat;
-    background-size: auto 0.1rem;
+    background-size: auto 0.14rem;
 }
 
 .table-list .add.active {
     background: url(../images/add2.png) center center no-repeat;
-    background-size: auto 0.1rem;
+    background-size: auto 0.14rem;
 }
