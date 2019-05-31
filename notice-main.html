@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>智慧财税</title>
     <link rel="stylesheet" href="css/notice.css">
+    <style>
+    .article-box .timer{
+        background: none;
+    }
+    </style>
 </head>
 
 <body>
@@ -19,17 +24,18 @@
                 <div class="pointer-right"></div>
             </h4> -->
             <div class="article-box">
-                <input type="text" value="2019年第一季度治税协查通知" class="title" placeholder="请输入标题...">
-                <textarea class="details" placeholder="请输入通知内容...">2019年第一季度治税协查通知内容</textarea>
+                <input type="text" readonly value="标题：2019年第一季度治税协查通知" class="title" placeholder="请输入标题...">
+                <textarea class="details" readonly placeholder="请输入通知内容...">内容：2019年第一季度治税协查通知内容</textarea>
                 <div class="timer">通知完成时间：
-                    <input type="text" value="2019-05-30" placeholder="年/月/日" readonly="readonly" name="appDate" id="appDate">
+                    <input type="text" readonly value="2019-05-30" placeholder="年/月/日" readonly="readonly" name="appDate" id="appDate">
                 </div>
-                <div class="department">通知发送部门：
-                    <select name="" id="">
+                <div class="timer" >通知发送部门：
+                    <input type="text" class="" readonly value="市场营销部">
+                    <!-- <select disabled name="" id="">
                         <option value="1">市场营销部</option>
                         <option value="1">行政管理部</option>
                         <option value="1">产品研发部</option>
-                    </select>
+                    </select> -->
                 </div>
                 <!-- <div class="article-btns">
                     <a id="send-btn" href="javascript:;">发送通告</a>
@@ -76,7 +82,7 @@
                 endYear: currYear + 10 //结束年份
             };
 
-            $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+            // $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
 
             $("#send-btn").click(function (events) {
                 var layerIndex = layer.open({
