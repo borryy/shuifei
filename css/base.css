@@ -299,3 +299,13 @@ h4.pointer {
     height: 0.36rem;
     line-height: 0.36rem;;
 }
+
+/*垂直翻转*/
+.px.screen-list.miss img.up {
+    -moz-transform:scaleY(-1);
+    -webkit-transform:scaleY(-1);
+    -o-transform:scaleY(-1);
+    transform:scaleY(-1);
+    /*IE*/
+    filter:FlipV;
+}
