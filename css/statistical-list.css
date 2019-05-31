@@ -30,11 +30,11 @@
 }
 
 .table tr {
-    height: 0.2rem;
+    height: 0.3rem;
 }
 
 .table td, .table th {
-    font-size: 0.12rem;
+    font-size: 0.13rem;
     vertical-align: middle;
     text-align: center;
 }
