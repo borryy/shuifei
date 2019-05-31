@@ -40,29 +40,43 @@
 }
 
 .page-select {
-    padding: 0 0.5rem;
+    padding: 0 0.1rem;
+}
+
+.pagination {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    margin: 0.2rem 0 0;
+    border-radius: 0.04rem;
+    overflow: hidden;
+    justify-content: center;
 }
 
-.page-select li {}
-
-.page-select a {
-    display: block;
-    width: 0.24rem;
-    height: 0.24rem;
-    text-align: center;
-    line-height: 0.24rem;
-    border: 1px solid #999;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 0.12rem;
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    border-radius: 0.04rem 0 0 0.04rem;
 }
 
-.page-select a.active {
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-radius: 0 0.04rem 0.04rem 0;
+}
+
+.pagination>li>a, .pagination>li>span {
+    font-size: 0.14rem;
+    position: relative;
+    float: left;
+    padding: 0 0.1rem;
+    line-height: 0.3rem;
+    text-decoration: none;
+    color: #003877;
     background-color: #fff;
-    color: #013065;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+}
+
+.pagination .page.active,
+.pagination .page.active a{
+    color: #fff;
+    background-color: #003877;
 }
 
 /* 弹窗筛选 */
@@ -166,4 +180,24 @@
     height: 0.3rem;
     line-height: 0.3rem;
     color: #777;
+}
+
+.arrow2 {
+    margin: 3px 8px 4px 0;
+    border-left: 5px dashed transparent;
+    border-bottom: 5px dashed transparent;
+    border-top: 5px dashed transparent;
+    border-right: 5px solid #ccc;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.arrow3 {
+    margin: 3px 0 4px 8px;
+    border-top: 5px dashed transparent;
+    border-bottom: 5px dashed transparent;
+    border-right: 5px dashed transparent;
+    border-left: 5px solid #ccc;
+    display: inline-block;
+    vertical-align: middle;
 }

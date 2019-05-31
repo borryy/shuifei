@@ -77,11 +77,12 @@
             $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
 
             $("#send-btn").click(function (events) {
-                layer.open({
+                var layerIndex = layer.open({
                     content: '发送成功'
                     , btn: '确定'
                     , yes: function (index) {
-                        location.href = "/";
+                        layer.close(layerIndex);
+                        $("#app").load("coordination.html");
                     }
                 });
             });

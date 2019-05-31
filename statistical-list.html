@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>智慧财税</title>
     <link rel="stylesheet" href="css/statistical-list.css">
-    <link rel="stylesheet" href="css/jquery.page.css">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/myPage.css">
 </head>
 
 <body>
@@ -90,7 +91,9 @@
                     <td></td>
                 </tr>
             </table>
-            <ul class="page-select" id="page-select"></ul>
+            <div class="page-select">
+                <ul class="pagination" id="page-select"></ul>
+            </div>
         </div>
     </div>
 
@@ -121,7 +124,7 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery.page.js"></script>
+    <script src="./js/jqPaginator.min.js"></script>
     <script>
         $(function () {
             $("#screening-btn").click(function (events) {
@@ -131,17 +134,36 @@
                 })
             });
 
-
-            createPageSelect(3);
-            // 分页
-            function createPageSelect(pageNum) {
-                var str = "";
-                for (var i = 0; i < pageNum; i++) {
-                    str += '<li><a href="javascript:;">' + (i + 1) + '</a></li>';
-                }
-                $("#page-select").append(str);
-            }
+            loadpage();
         });
+        // 分页
+        function exeData(num, type) {
+            loadpage();
+            ;[].map.call($("#page-select li a"),function(item){
+                $(item).removeClass("active");
+                if(item.innerHTML.toString() == num.toString()){
+                    console.log(item.innerHTML, num);
+                    $(item.parentNode).addClass("active");
+                }
+            });
+        }
+        function loadpage() {
+            $.jqPaginator('#page-select', {
+                totalPages: 20,
+                visiblePages: 4,
+                currentPage: 1,
+                first: '<li class="first"><a href="javascript:;">首页</a></li>',
+                prev: '<li class="prev"><a href="javascript:;"><i class="arrow arrow2"></i></a></li>',
+                next: '<li class="next"><a href="javascript:;"><i class="arrow arrow3"></i></a></li>',
+                last: '<li class="last"><a href="javascript:;">末页</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+                onPageChange: function (num, type) {
+                    if (type == "change") {
+                        exeData(num, type);
+                    }
+                }
+            });
+        }
         historys = "statistical-home.html"
     </script>
 </body>
