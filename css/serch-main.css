@@ -95,8 +95,8 @@
 }
 .serch-content .select select{
     height:0.3rem;
-    -webkit-appearance:none;
-    appearance:none;
+    /* -webkit-appearance:none;
+    appearance:none; */
     border:1px solid #fff;
     font-size:0.12rem;
     padding:0px 0.1rem;
