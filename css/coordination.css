@@ -1,0 +1,81 @@
+h4.pointer {
+    font-size: 0.14rem;
+    line-height: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem -0.05rem;
+}
+
+.topic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.topic .send-btn {
+    box-shadow: 0 0.02rem 0.1rem -0.04rem #000;
+    /* border: 0.01rem solid #fff; */
+    width: 2rem;
+    background: url(../images/send-btn.png) center center no-repeat;
+    background-size: auto 0.16rem;
+    background-color: rgba(2, 48, 100, 0.9);
+    color: #fff;
+    border-radius: 0.04rem;
+    padding: 0 0.14rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.12rem;
+    margin-top: 0.2rem;
+}
+
+.topic .send-btn:active, .topic .send-btn:focus {
+    background-color: #061a4d;
+}
+
+/* table */
+
+.table-box {
+    border-radius: 0.04rem;
+    margin: 0 auto 0.2rem;
+    width: 3.6rem;
+    background-color: #002461;
+    overflow: hidden;
+}
+
+.table-list {
+    width: 3.4rem;
+    margin: 0.2rem auto;
+    border-color: #eee;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-list tr {
+    height: 0.5rem;
+    font-size: 0.14rem;
+    color: #fff;
+}
+
+.table-list tr a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.table-list tr a:focus, .table-list tr a:active {
+    text-decoration: none;
+}
+
+.table-list .eye {
+    background: url(../images/eye.png) center center no-repeat;
+    background-size: auto 0.1rem;
+}
+
+.table-list .add {
+    background: url(../images/add.png) center center no-repeat;
+    background-size: auto 0.1rem;
+}
+
+.table-list .add.active {
+    background: url(../images/add2.png) center center no-repeat;
+    background-size: auto 0.1rem;
+}

@@ -1,60 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>智慧财税</title>
-    <style>
-    h4.pointer {
-        font-size: 0.14rem;
-        line-height: 0.25rem;
-        display: flex;
-        justify-content: space-between;
-        margin: 0.5rem -0.05rem;
-    }
-    </style>
+    <link rel="stylesheet" href="./css/coordination.css">
 </head>
+
 <body>
-    <!-- <header></header> -->
-    <div class="content">
-        <div class="box">
-            
-            <h4 class="pointer">
-                <div class="pointer-left"></div>
-                <a href="javascript:;" class="loads" data-url="notice1.html">税收预警</a>
-                <div class="pointer-right"></div>
-            </h4>
-            <h4 class="pointer">
-                <div class="pointer-left"></div>
-                <a href="javascript:;" class="loads" data-url="notice.html">发起协查通知</a>
-                <div class="pointer-right"></div>
-            </h4>
-            <h4 class="pointer">
-                <div class="pointer-left"></div>
-                <a href="javascript:;" class="loads" data-url="notice2.html">部门核查</a>
-                <div class="pointer-right"></div>
-            </h4>
-            <h4 class="pointer">
-                <div class="pointer-left"></div>
-                <a href="javascript:;" class="loads" data-url="notice3.html">核查结果反馈</a>
-                <div class="pointer-right"></div>
-            </h4>
+    <div class="content tabdiv">
+        <div class="table-box">
+            <div class="topic">
+                <span class="send-btn" id="send-btn"></span>
+            </div>
+            <table class="table-list" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th>序号</th>
+                    <th>协查通知</th>
+                    <th>查看</th>
+                    <th>关注</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2019年第一季度治税协查</td>
+                    <td class="eye"></td>
+                    <td class="add active"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2019年第一季度治税协查</td>
+                    <td class="eye"></td>
+                    <td class="add"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2019年第一季度治税协查</td>
+                    <td class="eye"></td>
+                    <td class="add"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>2019年第一季度治税协查</td>
+                    <td class="eye"></td>
+                    <td class="add"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>2019年第一季度治税协查</td>
+                    <td class="eye"></td>
+                    <td class="add"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>2019年第一季度治税协查</td>
+                    <td class="eye"></td>
+                    <td class="add"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>2019年第一季度治税协查</td>
+                    <td class="eye"></td>
+                    <td class="add"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>2019年第一季度治税协查</td>
+                    <td class="eye"></td>
+                    <td class="add"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>2019年第一季度治税协查</td>
+                    <td class="eye"></td>
+                    <td class="add"></td>
+                </tr>
+            </table>
         </div>
     </div>
-    
-    <!-- <script src="js/jquery-1.11.0.min.js"></script> -->
+
     <script>
         historys = "home.html"
-        $(".loads").off("click").on("click",function(){
+        $(".loads").off("click").on("click", function () {
             var url = $(this).attr("data-url")
-        historys = "coordination.html"
-        $('.loading').show();
-        $(".loads").off("click")
-        $("#app").load(url,function(){
-            $('.loading').fadeOut();
+            historys = "coordination.html"
+            $('.loading').show();
+            $(".loads").off("click")
+            $("#app").load(url, function () {
+                $('.loading').fadeOut();
+            })
         })
-    })
+        $("#send-btn").click(function (events) {
+            $("#app").length && $("#app").load("notice.html");
+        });
+        $(".add").click(function(events){
+            if($(this).hasClass("active")){
+                $(this).removeClass("active");
+            } else {
+                $(this).addClass("active");
+            }
+        });
     </script>
 </body>
+
 </html>
