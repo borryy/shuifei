@@ -531,11 +531,11 @@
                 })
             }
         });
-        $(".px.screen-list.miss img").click(function(events){
-            if($(this).hasClass('up')){
-                $(this).removeClass('up');
+        $(".px.screen-list.miss").click(function(events){
+            if($(this).find("img").hasClass('up')){
+                $(this).find("img").removeClass('up');
             } else {
-                $(this).addClass('up');
+                $(this).find("img").addClass('up');
             }
         });
     </script>
