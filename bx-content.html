@@ -18,7 +18,7 @@
             color: #fff;
             font-size: 0.12rem;
             background-color: #013065;
-            margin-bottom: 0rem;
+            /* margin-bottom: 0rem; */
         }
         .box{
             height: auto;
@@ -75,9 +75,9 @@
                 </h4>
             <div class="tabdiv">
                 <div class="tab-head">
-                    <h2 class="selected">缴纳增值税企业共同拥有</h2>
-                    <h2 onclick="show1()">独有企业税收情况</h2>
-                    <h2 onclick="show2()">缴纳增值税企业独有</h2>
+                    <h2 class="selected">缴纳共同拥有</h2>
+                    <h2 onclick="show1()">独有税收情况</h2>
+                    <h2 onclick="show2()">缴纳企业独有</h2>
                 </div>
                 <div class="tab-content">
                     <div class="show tdiv">
@@ -165,7 +165,11 @@
                 trigger: 'axis'
             },
             legend: {
-                data:['去年同比','上月环比','当前查询']
+                data:[
+                    {name:'去年同比',textStyle:{fontSize:getDpr()},icon: 'circle'},
+                    {name:'上月环比',textStyle:{fontSize:getDpr()},icon: 'circle'},
+                    {name:'当前查询',textStyle:{fontSize:getDpr()},icon: 'circle'}
+                    ],
             },
             grid: {
                 left: '3%',
@@ -181,10 +185,20 @@
             xAxis: {
                 type: 'category',
                 boundaryGap: false,
-                data: ['1992/10/21','1992/10/22','1992/10/23','1992/10/24','1992/10/25','1992/10/26']
+                data: ['1992/10/21','1992/10/22','1992/10/23','1992/10/24','1992/10/25','1992/10/26'],
+                axisLabel : {
+                    textStyle : {
+                        fontSize : getDpr()
+                    }
+                }
             },
             yAxis: {
-                type: 'value'
+                type: 'value',
+                axisLabel : {
+                    textStyle : {
+                        fontSize : getDpr()
+                    }
+                }
             },
             series: [
                 {
@@ -281,6 +295,32 @@
             
         })
     })
+    $("#app").scroll(function() {
+            var scroH = $("#app").scrollTop();  //滚动高度
+            if(scroH >100000){  //距离顶部大于20px时
+                $('.tabdiv .screen').css({
+                    "position": "fixed",
+                    "top": "1.2rem",
+                    "width": "3.6rem"
+                })
+                $('.tabdiv .tab-head').css({
+                    "position": "fixed",
+                    "top": "0.8rem",
+                    "width": "3.6rem"
+                })
+            }else{
+                $('.tabdiv .tab-head').css({
+                    "position": "relative",
+                    "top": "0",
+                    "width": "3.6rem"
+                })
+                $('.tabdiv .screen').css({  
+                    "position": "relative",
+                    "top": "0",
+                    "width": "3.6rem"
+                })
+            }
+        });
     </script>
 </body>
 </html>

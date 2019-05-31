@@ -16,7 +16,28 @@
     <script src="js/rem.js"></script>
     <script>
     var historys = '';
-    
+   
+    var getDpr = function getDpr(){
+        if (window.innerWidth) {
+        winWidth = window.innerWidth;
+        }
+        else if ((document.body) && (document.body.clientWidth)) {
+        winWidth = document.body.clientWidth;
+        }
+        // var dpr = $('html').attr('data-dpr');
+
+        if (winWidth < 321) {
+            return 12;
+        }else if (winWidth < 376) {
+            return  13;
+        }else if (winWidth < 415){
+            return 14;
+        }else if (winWidth < 769){
+            return 24;
+        }else{
+            return 36;
+        }
+    };
     </script>
 </head>
 <body>
@@ -112,6 +133,7 @@
         $(this).addClass("active");
         $(this).siblings().removeClass("active");
     })
+   
     </script>
 </body>
 </html>
