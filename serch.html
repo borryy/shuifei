@@ -138,7 +138,7 @@
 
         // 关闭弹窗
         $(".side-dialog-bg").click(closeSideDialog);
-
+        $(".side-dialog-bg .side-dialog").click(function(){return false;});
         // 打开弹窗
         function openSideDialog() {
             $(".side-dialog-bg").show();
