@@ -1,5 +1,4 @@
-
-.model{
+.model {
     padding: 0.2rem 0;
     width: 3.6rem;
     margin: 0.22rem auto;
@@ -9,7 +8,7 @@
     box-shadow: 0.01rem 0.01rem 0.1rem -0.02rem #333;
 }
 
-.table-header{
+.table-header {
     font-size: 0.12rem;
     display: flex;
     flex-direction: row;
@@ -17,42 +16,39 @@
     padding: 0.1rem 0.1rem 0.04rem;
 }
 
-.table-header .screening-btn{
+.table-header .screening-btn {
     padding-right: 0.16rem;
     background: url(../images/screening.png) center right no-repeat;
     background-size: 0.12rem;
 }
 
-.table{
+.table {
     box-sizing: border-box;
     border-color: #eee;
     margin: 0.1rem auto;
+    width: 3.4rem;
 }
 
-.table tr{
+.table tr {
     height: 0.2rem;
 }
 
-.table td,
-.table th{
+.table td, .table th {
     font-size: 0.12rem;
     vertical-align: center;
     text-align: center;
-    width: 1.51rem;
 }
 
-.page-select{
+.page-select {
     padding: 0 0.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.page-select li{
+.page-select li {}
 
-}
-
-.page-select a{
+.page-select a {
     display: block;
     width: 0.24rem;
     height: 0.24rem;
@@ -64,13 +60,14 @@
     font-size: 0.12rem;
 }
 
-.page-select a.active{
+.page-select a.active {
     background-color: #fff;
     color: #013065;
 }
 
 /* 弹窗筛选 */
-.dialog{
+
+.dialog {
     display: none;
     z-index: 1000;
     position: fixed;
@@ -78,10 +75,10 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, .7);
 }
 
-.dialog-content{
+.dialog-content {
     border-radius: 0.04rem;
     overflow: hidden;
     /* background-color: #f9f9f9; */
@@ -90,7 +87,7 @@
     margin: 1rem auto;
 }
 
-.dialog-header{
+.dialog-header {
     background-color: #e9e9e9;
     box-shadow: 0 0 10px #ccc;
     margin-bottom: 0.5rem;
@@ -103,7 +100,7 @@
     color: #666;
 }
 
-.dialog-btns{
+.dialog-btns {
     box-shadow: 0 0 10px #ccc;
     background-color: #e9e9e9;
     margin-top: 0.5rem;
@@ -114,7 +111,7 @@
     justify-content: center;
 }
 
-.dialog-btns a{
+.dialog-btns a {
     color: #666;
     display: block;
     width: 50%;
@@ -124,41 +121,41 @@
     text-align: center;
 }
 
-.dialog-btns a+a{
+.dialog-btns a+a {
     border-left: 1px solid #ccc;
 }
 
-.dialog-btns a:active,
-.dialog-btns a:focus,
-.dialog-btns a:hover{
+.dialog-btns a:active, .dialog-btns a:focus, .dialog-btns a:hover {
     background-color: #013065;
     color: #fff;
 }
-.dialog .row{
+
+.dialog .row {
     padding: 0.2rem 0;
     display: flex;
     height: 0.3rem;
     line-height: 0.3rem;
 }
 
-.dialog .row-left{
+.dialog .row-left {
     padding-right: 0.1rem;
     width: 0.8rem;
     text-align: right;
     font-size: 0.12rem;
     color: #999;
 }
-.dialog .row-right{
+
+.dialog .row-right {
     display: flex;
     width: 2rem;
 }
 
-.dialog .to{
+.dialog .to {
     color: #999;
     padding: 0 0.04rem;
 }
 
-.dialog .row-right input{
+.dialog .row-right input {
     display: block;
     width: 0.76rem;
     border-radius: 0.04rem;

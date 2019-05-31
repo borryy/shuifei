@@ -18,7 +18,7 @@
 .table{
     box-sizing: border-box;
     border-color: #eee;
-    width: 3rem;
+    width: 3.4rem;
     margin: 0.1rem auto;
 }
 
@@ -36,7 +36,6 @@
     font-size: 0.12rem;
     vertical-align: center;
     text-align: center;
-    width: 1.51rem;
 }
 
 .page-select{
