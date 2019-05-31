@@ -108,6 +108,9 @@
     color:#fff;
     border-radius:4px;
 }
+.serch-content .select select option{
+    font-size: 12px;
+}
 .serch-content .times{
     margin-bottom: 0.05rem;
     overflow: hidden;

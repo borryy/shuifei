@@ -199,6 +199,7 @@ footer ul li .img2{
 }
 footer ul li img {
     width: 0.145rem;
+    padding-top: 0.02rem;
 }
 
 footer ul li.center a img {
@@ -212,7 +213,7 @@ footer ul li a {
 
 footer ul li a p {
     position: absolute;
-    bottom: 3px;
+    bottom: 5px;
     left: 0;
     right: 0;
 }
