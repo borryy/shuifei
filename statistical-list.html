@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>智慧财税</title>
     <link rel="stylesheet" href="css/statistical-list.css">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/myPage.css">
 </head>
 
 <body>
-    
+
     <div>
         <div class="model">
             <h4 class="pointer">
@@ -24,72 +26,77 @@
             </div>
             <table class="table" border='1' cellspacing="0" cellpadding="0">
                 <tr>
-                    <th>公司名称</th>
-                    <th>纳税金额</th>
+                    <th style="width: 20%;">编号</th>
+                    <th style="width: 60%;">公司名称</th>
+                    <th style="width: 20%;">纳税金额</th>
                 </tr>
                 <tr>
                     <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
-                </tr>
-                <tr>
-                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td></td>
-                </tr>
-                <tr>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
-                </tr>
-                <tr>
-                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td></td>
-                </tr>
-                <tr>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
             </table>
-            <ul class="page-select">
-                <li><a class="active" href="javascript:;">1</a></li>
-                <li><a href="javascript:;">2</a></li>
-                <li><a href="javascript:;">3</a></li>
-                <li><a href="javascript:;">...</a></li>
-                <li><a href="javascript:;">99</a></li>
-            </ul>
+            <div class="page-select">
+                <ul class="pagination" id="page-select"></ul>
+            </div>
         </div>
     </div>
-    
+
 
     <!-- 弹窗 -->
     <div class="dialog" id="screening-dialog">
@@ -117,7 +124,7 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="./js/jqPaginator.min.js"></script>
     <script>
         $(function () {
             $("#screening-btn").click(function (events) {
@@ -125,8 +132,38 @@
                 $("#screening-dialog .dialog-btns a").click(function () {
                     $("#screening-dialog").fadeOut();
                 })
-            })
+            });
+
+            loadpage();
         });
+        // 分页
+        function exeData(num, type) {
+            loadpage();
+            ;[].map.call($("#page-select li a"),function(item){
+                $(item).removeClass("active");
+                if(item.innerHTML.toString() == num.toString()){
+                    console.log(item.innerHTML, num);
+                    $(item.parentNode).addClass("active");
+                }
+            });
+        }
+        function loadpage() {
+            $.jqPaginator('#page-select', {
+                totalPages: 20,
+                visiblePages: 4,
+                currentPage: 1,
+                first: '<li class="first"><a href="javascript:;">首页</a></li>',
+                prev: '<li class="prev"><a href="javascript:;"><i class="arrow arrow2"></i></a></li>',
+                next: '<li class="next"><a href="javascript:;"><i class="arrow arrow3"></i></a></li>',
+                last: '<li class="last"><a href="javascript:;">末页</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+                onPageChange: function (num, type) {
+                    if (type == "change") {
+                        exeData(num, type);
+                    }
+                }
+            });
+        }
         historys = "statistical-home.html"
     </script>
 </body>

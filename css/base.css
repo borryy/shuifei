@@ -4,7 +4,7 @@
 }
 
 body {
-    padding-bottom: 0.55rem;
+    padding-bottom: 0.45rem;
     padding-top: 0.8rem;
     overflow-x: hidden;
     box-sizing: border-box;
@@ -77,6 +77,7 @@ header {
     top: 0;
     left: 0;
     z-index: 10000;
+    box-shadow: 0 0 0.1rem -0.02rem #333;
 }
 
 .serchForm {
@@ -161,6 +162,7 @@ footer {
     position: fixed;
     bottom: 0;
     z-index: 10000;
+    box-shadow: 0 0 0.1rem -0.02rem #333;
 }
 
 footer ul, footer li {

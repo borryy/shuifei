@@ -3,7 +3,7 @@
     padding: 0.2rem 0;
     width: 3.6rem;
     margin: 0.22rem auto 0.2rem;
-    margin-bottom: 0;
+    margin-bottom: 0.2rem;
     background-color: #013065;
     color: #fff;
     border-radius: 0.08rem;
@@ -19,7 +19,7 @@
 .table{
     box-sizing: border-box;
     border-color: #eee;
-    width: 3rem;
+    width: 3.4rem;
     margin: 0.1rem auto;
 }
 
@@ -37,7 +37,6 @@
     font-size: 0.12rem;
     vertical-align: center;
     text-align: center;
-    width: 1.51rem;
 }
 
 .page-select{
