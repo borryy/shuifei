@@ -7,6 +7,117 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>智慧财税</title>
     <link rel="stylesheet" href="css/notice.css">
+    <style>
+        .dialog {
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.dialog-content {
+    border-radius: 0.04rem;
+    overflow: hidden;
+    /* background-color: #f9f9f9; */
+    background-color: #e6e7e9;
+    width: 3rem;
+    margin: 1rem auto;
+}
+
+.dialog-header {
+    background-color: #e9e9e9;
+    box-shadow: 0 0 10px #ccc;
+    /* margin-bottom: 0.5rem; */
+    border-bottom: 1px solid #ccc;
+    height: 0.4rem;
+    font-size: 0.14rem;
+    line-height: 0.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #666;
+}
+
+.dialog-btns {
+    box-shadow: 0 0 10px #ccc;
+    background-color: #e9e9e9;
+    /* margin-top: 0.5rem; */
+    height: 0.4rem;
+    font-size: 0.12rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dialog-btns a {
+    color: #666;
+    display: block;
+    width: 50%;
+    line-height: 0.4rem;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+.dialog-btns a+a {
+    border-left: 1px solid #ccc;
+}
+
+.dialog-btns a:active, .dialog-btns a:focus, .dialog-btns a:hover {
+    background-color: #013065;
+    color: #fff;
+}
+
+.dialog .row {
+    padding: 0.2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 0.3rem;
+    line-height: 0.3rem; */
+}
+
+.dialog .row-left {
+    padding-right: 0.1rem;
+    width: 0.8rem;
+    text-align: right;
+    font-size: 0.12rem;
+    color: #999;
+}
+
+.dialog .row-right {
+    display: flex;
+    width: 2rem;
+}
+
+.dialog .to {
+    color: #999;
+    padding: 0 0.04rem;
+}
+
+.dialog .row-right input {
+    display: block;
+    width: 0.76rem;
+    border-radius: 0.04rem;
+    border: 1px solid #ccc;
+    padding: 0 0.05rem;
+    background-color: transparent;
+    font-size: 0.12rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    color: #777;
+}
+.serch-content .select {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    padding-left: 0.1rem;
+}
+    </style>
 </head>
 
 <body>
@@ -25,19 +136,38 @@
                     <input type="text" placeholder="年/月/日" readonly="readonly" name="appDate" id="appDate">
                 </div>
                 <div class="department">通知发送部门：
-                    <select name="" id="">
+                    <!-- <select name="" id="">
                         <option value="1">市场营销部</option>
                         <option value="1">行政管理部</option>
                         <option value="1">产品研发部</option>
-                    </select>
+                    </select> -->
+                    <div style="display:inline-block;color:#625e70;" id="screening-btn">请选择部门...</div>
                 </div>
                 <div class="article-btns">
-                    <a id="send-btn" href="javascript:;">发送通告</a>
+                    <a id="send-btn" href="javascript:;"><img style="width: 0.17rem;vertical-align: middle;padding-right: 0.03rem;" src="./images/center4.svg" alt="">发送通告</a>
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="dialog" id="screening-dialog">
+            <div class="dialog-content">
+                <div class="dialog-header">选择部门</div>
+                <div class="row">
+                    <div style="width:100%;text-align: center;box-sizing: border-box; margin-top: 0.05rem;padding: 0.1rem;
+    font-size: 0.12rem;" class="option">市场营销部</div>
+                    <div style="width:100%;text-align: center;box-sizing: border-box; margin-top: 0.05rem;padding: 0.1rem;
+    font-size: 0.12rem;" class="option">行政管理部</div>
+                    <div style="width:100%;text-align: center;box-sizing: border-box; margin-top: 0.05rem;padding: 0.1rem;
+    font-size: 0.12rem;" class="option">产品研发部</div>
+                    
+                </div>
+                
+                <div class="dialog-btns">
+                    <a href="javascript:;">确定</a>
+                    <a href="javascript:;">取消</a>
+                </div>
+            </div>
+        </div>
     <script src="./js/layer.js"></script>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/mobiscroll_002.js" type="text/javascript"></script>
@@ -46,7 +176,16 @@
     <script src="js/mobiscroll_003.js" type="text/javascript"></script>
     <script src="js/mobiscroll_005.js" type="text/javascript"></script>
     <script>
-
+$("#screening-btn").click(function (events) {
+                $("#screening-dialog").fadeIn();
+                $("#screening-dialog .dialog-btns a").click(function () {
+                    $("#screening-dialog").fadeOut();
+                })
+            });
+            $("#screening-dialog .option").click(function(){
+                $(this).css("background","#ccc");
+                $(this).siblings().css("background","none")
+            })
         historys = "coordination.html"
         $(".loads").off("click").on("click", function () {
             var url = $(this).attr("data-url")

@@ -93,11 +93,15 @@
     background-color: inherit;
     margin-bottom: 0.05rem;
 }
+.serch-content .select{
+    border: 1px solid #fff;
+    border-radius:4px;
+}
 .serch-content .select select{
     height:0.3rem;
-    /* -webkit-appearance:none;
-    appearance:none; */
-    border:1px solid #fff;
+    -webkit-appearance:none;
+    appearance:none;
+    border:0;
     font-size:0.12rem;
     padding:0px 0.1rem;
     display:block;
@@ -110,6 +114,7 @@
 }
 .serch-content .select select option{
     font-size: 12px;
+    max-width: 700px;
 }
 .serch-content .times{
     margin-bottom: 0.05rem;
