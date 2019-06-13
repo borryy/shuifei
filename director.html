@@ -60,7 +60,7 @@
                     </h4>
                     <h4 data-url="director.html" class="pointer data-url="director.html"" style="background-color: #013065;margin-top:3px;margin-bottom: 0px;margin-left: 0rem;margin-right: 0rem;padding-left: 0.05rem;box-sizing: border-box;line-height: 0.35rem;">
                         <div class="pointer-center">
-                            <a href="javascript:;"><img src="./images/center4.svg" alt=""> 推送消息</a>
+                            <a class="ts" href="javascript:;"><img src="./images/center4.svg" alt=""> 推送消息</a>
                         </div>
                     </h4>
                     <h4 class="pointer loads" data-url="handle3.html" style="background-color: #013065;margin-top:3px;margin-bottom: 0px;margin-left: 0rem;margin-right: 0rem;padding-left: 0.05rem;box-sizing: border-box;line-height: 0.35rem;">
@@ -75,7 +75,7 @@
                     </h4>
         </div>
     </div>
-    
+    <script src="./js/layer.js"></script>
     <!-- <script src="js/jquery-1.11.0.min.js"></script> -->
     <script>
         historys = "home.html"
@@ -88,6 +88,13 @@
                 $('.loading').fadeOut();
             })
         })
+        $(".ts").click(function (events) {
+            var layerIndex =layer.open({
+                        content: '推送成功'
+                        ,skin: 'msg'
+                        ,time: 2 //2秒后自动关闭
+                    });
+            });
     </script>
 </body>
 

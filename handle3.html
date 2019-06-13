@@ -80,14 +80,14 @@
                     <img src="./images/edit.svg" alt="">
                 </div>
                 <div class="form-list">
-                    <button>保存</button>
+                    <button class="bc" type="button">保存</button>
                 </div>
                 
             </form>
            
         </div>
     </div>
-    
+    <script src="./js/layer.js"></script>
     <script>
         historys = "director.html"
         $(".loads").off("click").on("click",function(){
@@ -109,7 +109,15 @@
             $(this).addClass("edit");
         })
     
-   
+        $(".bc").click(function (events) {
+                var layerIndex =layer.open({
+                        content: '保存成功'
+                        ,skin: 'msg'
+                        ,time: 2 //2秒后自动关闭
+                    });
+                                    
+
+            });
     </script>
 </body>
 
